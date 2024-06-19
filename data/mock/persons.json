@@ -1,0 +1,112 @@
+[
+  {
+    "id": "0",
+    "username": "capatina.serban@chesscoders.com",
+    "role": "Persoana tehnica",
+    "last_name": "Capatina",
+    "first_name": "Serban",
+    "birthday": "2001-05-23",
+    "position": "Intern Web Developer",
+    "active": true,
+    "created": ["Bogdan Posedaru", "2022-08-10"]
+  },
+  {
+    "id": "1",
+    "username": "ionescu.leonardo@chesscoders.com",
+    "role": "Persoana tehnica",
+    "last_name": "Ionescu",
+    "first_name": "Leonardo",
+    "birthday": "1999-10-28",
+    "position": "Intern Web Developer",
+    "active": true,
+    "created": ["Bogdan Posedaru", "2022-07-19"]
+  },
+  {
+    "id": "2",
+    "username": "sfetcu.alexandra@chesscoders.com",
+    "role": "Persoana tehnica",
+    "last_name": "Sfetcu",
+    "first_name": "Alexandra",
+    "birthday": "2000-09-07",
+    "position": "Intern Web Developer",
+    "active": true,
+    "created": ["Bogdan Posedaru", "2022-01-07"]
+  },
+  {
+    "id": "3",
+    "username": "rugina.adi@chesscoders.com",
+    "role": "Persoana tehnica",
+    "last_name": "Rugina",
+    "first_name": "Adi",
+    "birthday": "1998-08-10",
+    "position": "Junior Front-end developer",
+    "active": true,
+    "created": ["Bogdan Posedaru", "2021-03-11"]
+  },
+  {
+    "id": "4",
+    "username": "alifantis.banel@chesscoders.com",
+    "role": "Persoana tehnica",
+    "last_name": "Alifantis",
+    "first_name": "Banel",
+    "birthday": "2001-04-23",
+    "position": "Junior Back-end developer",
+    "active": false,
+    "created": ["Bogdan Posedaru", "2020-7-20"]
+  },
+  {
+    "id": "5",
+    "username": "cutitaru.elvis@chesscoders.com",
+    "role": "Persoana tehnica",
+    "last_name": "Cutitaru",
+    "first_name": "Elvis",
+    "birthday": "2001-09-11",
+    "position": "Senior Front-end developer",
+    "active": true,
+    "created": ["Bogdan Posedaru", "2020-08-23"]
+  },
+  {
+    "id": "6",
+    "username": "scott.michael@chesscoders.com",
+    "role": "Persoana tehnica",
+    "last_name": "Scott",
+    "first_name": "Michael",
+    "birthday": "1962-08-06",
+    "position": "Project manager",
+    "active": false,
+    "created": ["Bogdan Posedaru", "2021-02-13"]
+  },
+  {
+    "id": "7",
+    "username": "swanick.oliver@chesscoders.com",
+    "role": "Persoana tehnica",
+    "last_name": "Swanick",
+    "first_name": "Oliver",
+    "birthday": "1995-12-24",
+    "position": "Junior Back-end developer",
+    "active": true,
+    "created": ["Bogdan Posedaru", "2022-03-03"]
+  },
+  {
+    "id": "8",
+    "username": "tiaru.justi@chesscoders.com",
+    "role": "Persoana tehnica",
+    "last_name": "Tiaru",
+    "first_name": "Justi",
+    "birthday": "1998-01-29",
+    "position": "Intern Web Developer",
+    "active": true,
+    "created": ["Bogdan Posedaru", "2022-01-13"]
+  },
+  {
+    "id": "9",
+    "username": "halper.jim@chesscoders.com",
+    "role": "Persoana tehnica",
+    "last_name": "Halpert",
+    "first_name": "Jim",
+    "birthday": "1979-10-20",
+    "position": "Senior Front-end developer",
+    "active": false,
+    "created": ["Bogdan Posedaru", "2021-08-31"]
+  }
+]

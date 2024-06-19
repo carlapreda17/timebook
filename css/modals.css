@@ -1,0 +1,11 @@
+.modal-content {
+  @apply rounded-lg bg-white border-0 dark:bg-slate-900 !important;
+}
+
+.modal-title {
+  @apply dark:text-white !important;
+}
+
+.modal-body {
+  @apply dark:text-white !important;
+}

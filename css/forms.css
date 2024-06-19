@@ -1,0 +1,118 @@
+input,
+textarea,
+select {
+  width: 100%;
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  @apply cursor-not-allowed bg-gray-200;
+}
+
+input:read-only,
+textarea:read-only,
+select:read-only {
+  @apply cursor-default;
+}
+
+button:focus {
+  outline: 0 !important;
+}
+
+button:active,
+a[role='button']:active {
+  outline: 0 !important;
+  position: relative;
+  top: 1px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  filter: opacity(0.75);
+}
+
+.form-dropdown {
+  @apply border border-gray-500 flex justify-between py-2 px-3 w-full bg-white;
+}
+
+.form-dropdown:focus-within {
+  @apply ring-1 ring-blue-500 border-blue-500;
+}
+
+.form-dropdown-list {
+  @apply z-10 bg-white w-full outline-none absolute top-full border-b border-r border-l border-gray-500;
+  max-height: 22rem;
+}
+
+.form-checkbox:disabled,
+.form-checkbox:disabled ~ div,
+.form-radio:disabled,
+.form-radio:disabled ~ span {
+  cursor: not-allowed !important;
+}
+
+input[type='number'] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='color'] {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  width: 2rem;
+  height: 2rem;
+}
+
+.has-error .form-input,
+.has-error .form-select,
+.has-error .form-textarea {
+  @apply border-red-500;
+}
+
+.has-error .form-label,
+.has-error .form-help {
+  @apply text-red-600 !important;
+}
+
+.input,
+.textarea {
+  @apply w-full bg-gray-50 rounded-md border-0 outline-none p-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm dark:bg-slate-800 dark:ring-slate-700 dark:focus:ring-sky-500 dark:text-slate-200 !important;
+}
+
+.select {
+  @apply h-11.5 w-full bg-gray-50 rounded-md border-0 outline-none p-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm dark:bg-slate-800 dark:ring-slate-700 dark:focus:ring-sky-500 dark:text-slate-200 !important;
+}
+
+.label {
+  @apply font-medium dark:text-white mb-1 !important;
+}
+
+/* Styling Autocompleted Inputs */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px #ffffff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active > .dark {
+  -webkit-background-clip: text;
+  box-shadow: inset 0 0 20px 20px #0f172a;
+  transition: background-color 5000s ease-in-out 0s;
+}

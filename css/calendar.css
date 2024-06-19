@@ -1,0 +1,189 @@
+.react-calendar {
+  @apply w-full dark:bg-slate-900 pt-4 !important;
+}
+
+.datepicker .react-calendar {
+  @apply w-full border dark:border-slate-600 rounded dark:bg-slate-900 pt-4 !important;
+}
+
+.react-calendar--doubleView {
+  width: 700px;
+}
+.react-calendar--doubleView .react-calendar__viewContainer {
+  display: flex;
+  margin: -0.5em;
+}
+.react-calendar--doubleView .react-calendar__viewContainer > * {
+  width: 50%;
+  margin: 0.5em;
+}
+.react-calendar,
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.react-calendar button {
+  margin: 0;
+  border: 0;
+  outline: none;
+}
+.react-calendar button:enabled:hover {
+  cursor: pointer;
+}
+.react-calendar__navigation {
+  height: 44px;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+}
+.react-calendar__navigation > button {
+  padding: 1rem 0;
+}
+.react-calendar__navigation button {
+  @apply dark:text-slate-300 px-4 !important;
+}
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  @apply bg-primary text-white dark:bg-slate-700 !important;
+}
+.react-calendar__navigation button[disabled] {
+  background-color: #f0f0f0;
+}
+.react-calendar__month-view__weekdays {
+  @apply uppercase font-semibold text-sm text-center dark:text-white !important;
+}
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5em;
+}
+.react-calendar__month-view__weekNumbers {
+  font-weight: bold;
+}
+.react-calendar__month-view__weekNumbers .react-calendar__tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75em;
+  padding: calc(0.75em / 0.75) calc(0.5em / 0.75);
+}
+
+.react-calendar__month-view__days__day {
+  @apply dark:text-white !important;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  @apply text-primary dark:text-sky-400 bg-gray-100 dark:bg-slate-800 !important;
+}
+.react-calendar__month-view__days__day--neighboringMonth {
+  @apply text-gray-500 dark:text-slate-400 !important;
+}
+.react-calendar__year-view .react-calendar__tile,
+.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__century-view .react-calendar__tile {
+  @apply p-3 !important;
+}
+.react-calendar__tile {
+  @apply uppercase font-semibold text-sm text-center p-3 !important;
+}
+.react-calendar__tile:disabled {
+  background-color: #f0f0f0;
+}
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  @apply text-white bg-primary !important;
+}
+.react-calendar__tile--hasActive {
+  background: #76baff;
+}
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  background: #a9d4ff;
+}
+.react-calendar__tile--active {
+  @apply text-white bg-primary !important;
+}
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #53b0ae;
+}
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: #e6e6e6;
+}
+
+/* date-range-picker*/
+
+.rdrDateRangePickerWrapper {
+  @apply dark:bg-slate-900 !important;
+}
+
+.rdrDefinedRangesWrapper {
+  @apply min-w-max dark:bg-slate-900 dark:border-slate-700 pr-4 !important;
+}
+
+.rdrDateDisplayWrapper {
+  @apply dark:bg-slate-900 !important;
+}
+
+.rdrMonthAndYearWrapper {
+  @apply dark:bg-slate-900 !important;
+}
+
+.rdrYearPicker > select {
+  @apply dark:hover:bg-slate-800 dark:text-white cursor-pointer  !important;
+}
+
+.rdrMonthPicker > select {
+  @apply dark:hover:bg-slate-800 dark:text-white cursor-pointer !important;
+}
+
+.rdrNextPrevButton {
+  @apply dark:hover:bg-slate-800 !important;
+}
+
+.rdrDateInput {
+  @apply dark:bg-slate-800 !important;
+}
+
+.rdrNextPrevButton .rdrNextButton > i {
+  @apply border-white !important;
+}
+
+.rdrStaticRanges {
+  @apply dark:bg-slate-900 dark:text-white dark:border-slate-700 dark:divide-slate-700 !important;
+}
+
+.rdrStaticRange:hover .rdrStaticRangeLabel,
+.rdrStaticRange:focus .rdrStaticRangeLabel {
+  @apply dark:bg-slate-800 !important;
+}
+
+.rdrMonths {
+  @apply dark:bg-slate-900 !important;
+}
+
+.rdrDay > .rdrDayNumber > span {
+  @apply dark:text-slate-300 !important;
+}
+
+.rdrDayPassive > .rdrDayNumber > span {
+  @apply dark:text-slate-500 !important;
+}
+
+.rdrWeekDay {
+  @apply dark:text-white !important;
+}
+
+.dark .rdrNextButton i {
+  margin: 0 0 0 7px;
+  border-width: 4px 4px 4px 6px;
+  border-color: transparent transparent transparent rgb(255, 255, 255);
+  transform: translate(3px, 0px);
+}
+
+.dark .rdrPprevButton i {
+  border-width: 4px 6px 4px 4px;
+  border-color: transparent rgb(255, 255, 255) transparent transparent;
+  transform: translate(-3px, 0px);
+}

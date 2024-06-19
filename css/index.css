@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'normalize.css';
+@import 'animate.css';
+@import 'buttons.css';
+@import 'calendar.css';
+@import 'components.css';
+@import 'forms.css';
+@import 'layout.css';
+@import 'loading.css';
+@import 'menu.css';
+@import 'modals.css';
+@import 'tables.css';
+@import 'toast.css';
+
+/**
+* Hide vertical scrollbar but allow scrolling
+*/
+body {
+  -ms-overflow-style: none; /* Edge, Internet Explorer */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

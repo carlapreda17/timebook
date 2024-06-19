@@ -1,0 +1,32 @@
+[
+  {
+    "userId": "632c1314a7f8e7218c48dee9",
+    "userFirstName": "Pam",
+    "userLastName": "Beesly",
+    "_id": "0",
+    "startDate": "2022-10-28",
+    "endDate": "2022-10-28",
+    "message": "Dau o fuga pana la tara",
+    "status": "approved"
+  },
+  {
+    "userId": "632c1314a7f8e7218c48deea",
+    "userFirstName": "Serban",
+    "userLastName": "Capatina",
+    "_id": "1",
+    "startDate": "2022-12-27",
+    "endDate": "2022-10-30",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur, odio ut ullamcorper maximus, quam magna mollis felis, sed ultricies est turpis nec nunc. Duis et leo at dolor pretium sollicitudin vitae vel justo. Integer eget magna tempus, porta felis nec, semper dolor. Duis erat nisi, pellentesque condimentum turpis aliquam, tincidunt tincidunt nunc. Donec euismod facilisis pretium. In convallis finibus nisl, at consectetur nisi scelerisque in. Duis cursus justo quis tortor rutrum, sit amet tincidunt felis elementum. Nunc congue sem ligula. Sed pharetra justo quis suscipit dictum. Cras placerat urna metus, quis aliquam lacus consequat eget. Nam nec congue augue.",
+    "status": "rejected"
+  },
+  {
+    "userId": "632c1314a7f8e7218c48dee8",
+    "userFirstName": "Jim",
+    "userLastName": "Halpert",
+    "_id": "2",
+    "startDate": "2022-01-04",
+    "endDate": "2022-01-10",
+    "message": "Dau o fuga pana in Hawaii",
+    "status": "pending"
+  }
+]
