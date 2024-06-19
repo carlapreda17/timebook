@@ -19,7 +19,7 @@ const CalendarHeader = ({
   setView,
 }) => {
   return (
-    <div className="flex flex-col gap-6 bg-primary text-white rounded-t-xl p-5">
+    <div className="w-full flex flex-col gap-6 bg-primary text-white rounded-t-xl p-5">
       <div className="flex flex-row items-center justify-between">
         <div className="flex items-center gap-4">
           <CalendarHeaderArrows

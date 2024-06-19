@@ -17,7 +17,11 @@ const DebouncedInput = ({ timeout, onChange, ...props }) => {
   };
 
   return (
-    <input type="text" inputMode="text" className="form-input" {...props} onChange={handleChange} />
+    <div className={"flex align-items relative"}>
+      <input type="text" inputMode="text" className="form-input" {...props}
+             onChange={handleChange}/>
+      <i className="fa-solid fa-magnifying-glass text-primary dark:text-slate-400 absolute top-4 right-2"/>
+    </div>
   );
 };
 

@@ -14,7 +14,7 @@ const VacationSituationsRowActions = ({ id, refetch }) => {
     <div className="flex items-center gap-4 relative justify-center">
       <div
         onClick={() => setShowContextMenu(true)}
-        className="hidden md:flex items-center cursor-pointer px-4"
+        className="md:flex items-center cursor-pointer px-4"
         role="button"
       >
         <i className="fa-solid fa-ellipsis-vertical" />

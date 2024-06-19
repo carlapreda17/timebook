@@ -122,8 +122,8 @@ const DateRange = ({ onChange, options, ...props }) => {
             {
               label: 'Saptamana aceasta',
               range: () => ({
-                startDate: startOfWeek(new Date(), { weekStartsOn: 1 }),
-                endDate: addDays(startOfWeek(new Date(), { weekStartsOn: 1 }), 6),
+                startDate: startOfWeek(new Date(), {weekStartsOn: 1}),
+                endDate: addDays(startOfWeek(new Date(), {weekStartsOn: 1}), 6),
               }),
               isSelected() {
                 return false;
@@ -132,10 +132,10 @@ const DateRange = ({ onChange, options, ...props }) => {
             {
               label: 'Saptamana trecuta',
               range: () => ({
-                startDate: startOfWeek(subDays(startOfWeek(new Date(), { weekStartsOn: 1 }), 6), {
+                startDate: startOfWeek(subDays(startOfWeek(new Date(), {weekStartsOn: 1}), 6), {
                   weekStartsOn: 1,
                 }),
-                endDate: endOfWeek(subDays(startOfWeek(new Date(), { weekStartsOn: 1 }), 6), {
+                endDate: endOfWeek(subDays(startOfWeek(new Date(), {weekStartsOn: 1}), 6), {
                   weekStartsOn: 1,
                 }),
               }),
@@ -189,7 +189,7 @@ const DateRange = ({ onChange, options, ...props }) => {
           className="pl-4 pr-6 h-full overscroll-auto hidden md:flex"
         />
         {/* For resolutions < 768px */}
-        <DateRangeMobile handleChange={handleChange} range={range} />
+          <DateRangeMobile handleChange={handleChange} range={range}/>
         <div className="flex mx-6 my-6 gap-4 justify-between flex-col md:flex-row ">
           <div className="flex gap-4 flex-col md:flex-row">
             <button className="cancel" onClick={hideDateRange}>

@@ -16,7 +16,7 @@ const Layout = ({ role = 'user', title, children }) => {
             <MenuButton />
           </div>
         </div>
-        <div className="max grid p-4 lg:p-8 gap-4">
+        <div className="w-full grid p-4 lg:p-8 gap-4">
           <ErrorBoundary>
             <div>{children}</div>
           </ErrorBoundary>

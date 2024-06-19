@@ -17,7 +17,7 @@ const PollsUserFilter = ({ setOptions }) => {
 
   return (
     <div>
-      <label className="font-semibold mb-1">{'Sortare dupa persoana'}</label>
+      <label className="font-semibold mb-2">{'Sortare dupa persoana'}</label>
       <select className="select" onChange={(e) => setUserFilter(e.target.value)} defaultValue={''}>
         <option value="">Toate persoanele</option>
         {status === 'success' &&

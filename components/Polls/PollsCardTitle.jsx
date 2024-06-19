@@ -9,7 +9,7 @@ const PollsCardTitle = ({ title, id }) => {
   return (
     <div className="flex flex-col">
       <Link href={`/${me?.role}/polls/${id}`}>
-        <h3 className="text-lg font-semibold cursor-pointer whitespace-normal hover:text-primary dark:text-white">
+        <h3 className="text-lg pr-2 font-semibold cursor-pointer whitespace-normal hover:text-primary dark:text-white">
           {truncate(title, LIMIT)}
         </h3>
       </Link>

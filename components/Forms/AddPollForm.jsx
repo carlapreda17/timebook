@@ -31,7 +31,7 @@ const AddPollForm = () => {
       onSubmit={handleSubmit}
     >
       <Form className="w-fit">
-        <div className="flex flex-col gap-2 md:flex-row">
+        <div className="flex flex-col tablet:items-center gap-2 md:flex-row">
           <div className="card max-w-md flex flex-col gap-4 h-fit">
             <PollTitle />
             <PollDescription />
@@ -39,7 +39,7 @@ const AddPollForm = () => {
             <SelectPriority />
             <PollExpirePeriod />
             <PollAnonymity />
-            <Submit className=" hidden md:block w-full h-fit max-w-md text-base px-6">
+            <Submit className="hidden md:block w-full h-fit max-w-md text-base px-6">
               Adaugă
             </Submit>
           </div>
@@ -47,9 +47,8 @@ const AddPollForm = () => {
             <AddOptionField />
           </div>
         </div>
-
         <div className="w-full">
-          <Submit className="block md:hidden w-full h-fit max-w-md text-base px-6">Adauga</Submit>
+          <Submit className="block mt-4 md:hidden w-full h-fit max-w-md text-base px-6">Adaugă</Submit>
         </div>
       </Form>
     </Formik>
