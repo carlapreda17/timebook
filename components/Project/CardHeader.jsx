@@ -5,7 +5,7 @@ const ProjectCardHeader = ({ _id, name, icon, status }) => (
   <div className="flex justify-between w-full mb-6">
     <div className="flex flex-col">
       <ProjectTitle id={_id} name={name} />
-      <h5 className="text-gray-500 dark:text-slate-300">{status}</h5>
+      <h5 className="text-gray-500 dark:text-slate-300 mobile:text-xs">{status}</h5>
     </div>
     <ProjectMainIcon id={_id} icon={icon} />
   </div>

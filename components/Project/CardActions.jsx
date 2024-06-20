@@ -15,7 +15,7 @@ const ProjectCardActions = ({ _id, refetch }) => {
     <div className="flex items-center gap-4 relative justify-center -mr-4 dark:text-slate-300">
       <div
         onClick={() => setShowContextMenu(true)}
-        className="hidden md:flex items-center cursor-pointer px-4"
+        className="md:flex items-center cursor-pointer px-4 mobile:pl-2"
         role="button"
       >
         <i className="fa-solid fa-ellipsis-vertical text-xl" />

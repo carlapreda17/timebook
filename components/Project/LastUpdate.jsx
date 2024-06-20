@@ -10,7 +10,7 @@ const ProjectLastUpdate = ({ updatedAt }) => {
   const distance = formatDistanceToNow(new Date(updatedAt), { locale: ro });
 
   return (
-    <div className="flex items-center text-xs dark:text-slate-300">Actualizat acum {distance}</div>
+    <div className="flex items-center mobile:pl-2 text-xs dark:text-slate-300">Actualizat acum {distance}</div>
   );
 };
 

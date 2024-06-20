@@ -91,9 +91,21 @@ input[type='color'] {
 }
 
 .select {
-  @apply h-11.5 w-full bg-gray-50 rounded-md border-0 outline-none p-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm dark:bg-slate-800 dark:ring-slate-700 dark:focus:ring-sky-500 dark:text-slate-200 !important;
+  @apply h-11.5 w-full bg-gray-50 rounded-md border-0 outline-none p-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm dark:bg-slate-800 dark:ring-slate-700 dark:focus:ring-sky-500 dark:text-slate-200 mobile:pr-6 mobile:p-2 tablet:text-[0.75rem] mobile:text-[0.725rem] !important;
 }
 
+
+@media (max-width: 640px) {
+  .select::placeholder {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 386px) {
+  .select::placeholder {
+    font-size: 0.725rem;
+  }
+}
 .label {
   @apply font-medium dark:text-white mb-1 !important;
 }
