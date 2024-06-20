@@ -12,19 +12,19 @@ const VacationStatusAdmin = ({ status, id, refetch }) => {
   return (
     <>
       {status === 'approved' && (
-        <Tooltip icon={'fa-solid fa-check text-secondary text-2xl w-full text-center'}>
+        <Tooltip icon={'fa-solid fa-check tablet:text-lg text-secondary text-2xl w-full text-center'}>
           Aprobat
         </Tooltip>
       )}
       {status === 'rejected' && (
-        <Tooltip icon={'fa-solid fa-xmark text-accent text-2xl w-full text-center'}>
+        <Tooltip icon={'fa-solid fa-xmark tablet:text-lg text-accent text-2xl w-full text-center'}>
           Respins
         </Tooltip>
       )}
       {status === 'pending' && (
         <div className="flex relative px-1">
           <div className="cursor-pointer" onClick={() => setShowContextMenu(true)}>
-            <Tooltip icon={'fa-solid fa-hourglass text-primary text-xl w-full dark:text-sky-500'}>
+            <Tooltip icon={'fa-solid fa-hourglass tablet:text-lg text-primary text-xl w-full dark:text-sky-500'}>
               In asteptare
             </Tooltip>
           </div>

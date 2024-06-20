@@ -104,13 +104,13 @@ const Project = ({ data }) => {
         <div className="flex justify-between tablet:grid">
           <div className="flex gap-6 tablet:gap-3">
             <Link href={`/admin/timesheets/projects/${data.project._id}`}>
-              <button className="flex items-center p-2.5 bg-primary text-white text-base gap-2 rounded-lg tablet:ml-3 tablet:text-sm">
+              <button className="flex items-center p-2.5 bg-primary text-white text-base gap-2 rounded-lg tablet:text-sm">
                 <i className="fas fa-clock tablet:text-base" />
                 Arata Timesheet
               </button>
             </Link>
             <Link href={`/admin/projects/${data.project._id}/edit`}>
-              <button className="flex items-center p-2.5 bg-secondary text-white text-base gap-2 rounded-lg tablet:ml-3 tablet:text-sm">
+              <button className="flex items-center p-2.5 bg-secondary text-white text-base gap-2 rounded-lg tablet:text-sm">
                 <i className="fas fa-edit tablet:text-base" />
                 Editeaza proiect
               </button>
@@ -118,7 +118,7 @@ const Project = ({ data }) => {
           </div>
           {data.project.active && (
             <button
-              className="flex items-center p-2.5 bg-accent text-white text-base gap-2 rounded-lg tablet:ml-3 tablet:text-sm tablet:justify-center tablet:mt-3"
+              className="flex items-center p-2.5 bg-accent text-white text-base gap-2 rounded-lg tablet:text-sm tablet:justify-center tablet:mt-3"
               onClick={handleClick}
             >
               <i className="fas fa-trash tablet:text-base" />
@@ -127,7 +127,7 @@ const Project = ({ data }) => {
           )}
           {!data.project.active && (
             <button
-              className="flex items-center p-2.5 bg-secondary text-white text-base gap-2 rounded-lg tablet:ml-3 tablet:text-sm"
+              className="flex items-center p-2.5 bg-secondary text-white text-base gap-2 rounded-lg tablet:text-sm"
               onClick={handleClick}
             >
               <i className="fas fa-arrow-up" />

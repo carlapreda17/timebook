@@ -7,12 +7,12 @@ const VacationsTableAdminSuccess = ({ data, refetch }) => {
   const showVacations = (data) => {
     return (
       <tr className="table-row" key={data._id}>
-        <td className="p-3 w-64">
+        <td className="p-3 w-64 tablet:w-50">
           <PersonLink data={data} />
         </td>
-        <td className="p-3 w-40">{dateLocaleRo(data.startDate)}</td>
-        <td className="p-3 w-40">{dateLocaleRo(data.endDate)}</td>
-        <td className="p-3">
+        <td className="p-3 min-w-40 tablet:text-xs">{dateLocaleRo(data.startDate)}</td>
+        <td className="p-3 min-w-40 tablet:text-xs">{dateLocaleRo(data.endDate)}</td>
+        <td className="p-3 min-w-64 tablet:text-xs tablet:overflow-x-auto">
           {data.description !== undefined && (
             <Description description={data.description} limit={85} copyText={false} />
           )}
@@ -25,7 +25,7 @@ const VacationsTableAdminSuccess = ({ data, refetch }) => {
   };
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full tablet:overflow-x-auto">
       <table className="w-min-full">
         <VacationsTableAdminHead />
         <tbody>{data.map(showVacations)}</tbody>

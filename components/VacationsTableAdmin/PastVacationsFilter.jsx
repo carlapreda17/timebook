@@ -2,9 +2,9 @@ import { Checkbox } from '../Fields';
 
 const PastVacationsFilter = ({ onChange }) => {
   return (
-    <div className="mt-9">
+    <div className="flex sm:mt-5">
       <Checkbox onChange={onChange} className="form-checkbox rounded-full">
-        <span>Arata concediile din trecut</span>
+        <span className="tablet:text-sm">Arata concediile din trecut</span>
       </Checkbox>
     </div>
   );

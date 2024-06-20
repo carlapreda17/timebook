@@ -4,11 +4,11 @@ import { classnames } from '../../lib';
 
 const AdminListSuccess = ({ data }) => {
   return (
-    <div className={classnames('pt-5 w-screen sm:w-full overflow-x-auto relative -mx-4 sm:mx-0')}>
+    <div className={classnames('pt-5 w-full overflow-x-auto relative sm:-mx-4 sm:mx-0')}>
       <table className={classnames('border-collapse rounded-lg shadow-md overflow-x-auto')}>
         <thead className="table-head">
           <tr>
-            <td className="p-4 text-sm px-2 sm:px-8 w-full ">Nume</td>
+            <td className="p-4 text-sm px-2 sm:px-8 w-full">Nume</td>
             <td className="p-4 text-sm px-2 sm:px-4 w-full">E-mail</td>
           </tr>
         </thead>

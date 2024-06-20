@@ -40,7 +40,7 @@ const VacationsTableAdminFilters = ({ setOptions }) => {
   };
 
   return (
-    <div className="flex gap-6">
+    <div className="flex gap-6 items-center tablet:grid ">
       <UserFilter onChange={setUserFilter} />
       <VacationStatusFilter onChange={setStatusFilter} />
       <PastVacationsFilter onChange={pastVacationsFilter} />

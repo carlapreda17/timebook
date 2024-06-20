@@ -21,7 +21,7 @@ const UserFilter = ({ onChange, value, role = 'user', active = true }) => {
   const { data, status } = useQuery('identities', options);
 
   return (
-    <div className="w-fit">
+    <div className="w-fit tablet:w-56">
       <div>
         <label className="font-semibold mb-1">Nume persoana</label>
         <select
