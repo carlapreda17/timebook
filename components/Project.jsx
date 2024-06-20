@@ -38,35 +38,35 @@ const Project = ({ data }) => {
   };
   return (
     <div>
-      <div className="card p-6 gap-6 bg-white max-w-5xl">
+      <div className="card p-6 gap-6 bg-white lg:max-w-5xl mx-auto">
         <div className="space-y-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-end gap-4">
-              <i className={data.project.icon + ' text-5xl text-primary dark:text-slate-200'}></i>
-              <h2 className="text-3xl font-semibold dark:text-white">{data.project.name}</h2>
+            <div className="flex items-center gap-4">
+              <i className={data.project.icon + ' text-5xl text-primary dark:text-slate-200 tablet:text-3xl'}></i>
+              <h2 className="text-3xl font-semibold dark:text-white tablet:text-xl">{data.project.name}</h2>
             </div>
             <div className="flex gap-2 dark:text-slate-300">
               {data.project.active && (
-                <Tooltip icon="fas fa-circle-check text-3xl text-secondary">Activ</Tooltip>
+                <Tooltip icon="fas fa-circle-check text-3xl text-secondary tablet:text-2xl">Activ</Tooltip>
               )}
               {data.project.important && (
-                <Tooltip icon="fas fa-exclamation-circle text-3xl text-primary">Important</Tooltip>
+                <Tooltip icon="fas fa-exclamation-circle text-3xl text-primary tablet:text-2xl">Important</Tooltip>
               )}
               {data.project.urgent && (
-                <Tooltip icon="fas fa-clock text-3xl text-accent">Urgent</Tooltip>
+                <Tooltip icon="fas fa-clock text-3xl text-accent tablet:text-2xl">Urgent</Tooltip>
               )}
             </div>
           </div>
 
           <div className="">
-            <h3 className="text-2xl text-semibold text-primary dark:text-slate-200">Descriere</h3>
-            <p className="text-lg dark:text-slate-400">{data.project.description}</p>
+            <h3 className="text-2xl text-semibold text-primary dark:text-slate-200 tablet:text-lg">Descriere</h3>
+            <p className="text-lg dark:text-slate-400 tablet:text-sm">{data.project.description}</p>
           </div>
           <div className="">
-            <h3 className="text-2xl text-semibold text-primary dark:text-slate-200">Status</h3>
-            <p className="text-lg dark:text-slate-400">{data.project.status}</p>
+            <h3 className="text-2xl text-semibold text-primary dark:text-slate-200 tablet:text-lg">Status</h3>
+            <p className="text-lg dark:text-slate-400 tablet:text-sm">{data.project.status}</p>
           </div>
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid grid-cols-3 tablet:grid-cols-2 mobile:grid-cols-1 gap-5">
             <WordpressCounterBox
               icon="fas fa-calendar-day"
               title="Data inceperii proiectului"
@@ -101,33 +101,33 @@ const Project = ({ data }) => {
             ></WordpressCounterBox>
           </div>
         </div>
-        <div className="flex justify-between">
-          <div className="flex gap-6 ">
+        <div className="flex justify-between tablet:grid">
+          <div className="flex gap-6 tablet:gap-3">
             <Link href={`/admin/timesheets/projects/${data.project._id}`}>
-              <button className="flex items-center p-2.5 bg-primary text-white text-base gap-2 rounded-lg">
-                <i className="fas fa-clock" />
+              <button className="flex items-center p-2.5 bg-primary text-white text-base gap-2 rounded-lg tablet:ml-3 tablet:text-sm">
+                <i className="fas fa-clock tablet:text-base" />
                 Arata Timesheet
               </button>
             </Link>
             <Link href={`/admin/projects/${data.project._id}/edit`}>
-              <button className="flex items-center p-2.5 bg-secondary text-white text-base gap-2 rounded-lg">
-                <i className="fas fa-edit" />
+              <button className="flex items-center p-2.5 bg-secondary text-white text-base gap-2 rounded-lg tablet:ml-3 tablet:text-sm">
+                <i className="fas fa-edit tablet:text-base" />
                 Editeaza proiect
               </button>
             </Link>
           </div>
           {data.project.active && (
             <button
-              className="flex items-center p-2.5 bg-accent text-white text-base gap-2 rounded-lg"
+              className="flex items-center p-2.5 bg-accent text-white text-base gap-2 rounded-lg tablet:ml-3 tablet:text-sm tablet:justify-center tablet:mt-3"
               onClick={handleClick}
             >
-              <i className="fas fa-trash" />
+              <i className="fas fa-trash tablet:text-base" />
               Șterge proiect
             </button>
           )}
           {!data.project.active && (
             <button
-              className="flex items-center p-2.5 bg-secondary text-white text-base gap-2 rounded-lg"
+              className="flex items-center p-2.5 bg-secondary text-white text-base gap-2 rounded-lg tablet:ml-3 tablet:text-sm"
               onClick={handleClick}
             >
               <i className="fas fa-arrow-up" />
