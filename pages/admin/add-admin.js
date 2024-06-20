@@ -47,27 +47,29 @@ const Page = () => {
                 </Fieldset>
               </div>
             </div>
-            <div className="flex">
-              <div className="w-1/2 mr-6">
+            <div className="flex tablet:grid">
+              <div className="w-1/2 tablet:mb-5 sm:mr-6 tablet:w-full">
                 <Birthday />
               </div>
-              <div className="w-1/2">
+              <div className="w-1/2 tablet:mb-5 tablet:w-full">
                 <Fieldset name="job" label="Pozitie in cadrul companiei">
                   <Field id="job" name="job" as={Input} autoComplete="off" />
                 </Fieldset>
               </div>
             </div>
-            <Fieldset name="email" label="E-mail">
-              <Field id="email" name="email" as={Email} autoComplete="new-email" />
-            </Fieldset>
-            <div className="flex">
-              <div className="w-1/2 mr-6">
+           <div className="tablet:mb-5">
+             <Fieldset name="email" label="E-mail">
+               <Field id="email" name="email" as={Email} autoComplete="new-email" />
+             </Fieldset>
+           </div>
+            <div className="flex tablet:grid">
+              <div className="w-1/2 tablet:mb-5 sm:mr-6 tablet:w-full">
                 <Fieldset name="password" label="Parola">
                   <div className="mb-1" />
                   <Field id="password" name="password" as={Password} autoComplete="new-password" />
                 </Fieldset>
               </div>
-              <div className="w-1/2">
+              <div className="w-1/2 tablet:mb-5 tablet:w-full">
                 <Fieldset name="password_confirm" label="Confirma parola">
                   <div className="mb-1" />
                   <Field id="password_confirm" name="password_confirm" as={Password} />

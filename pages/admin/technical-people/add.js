@@ -45,7 +45,7 @@ const Page = () => {
             onSubmit={handleSubmit}
           >
             <Form className="flex flex-col space-y-4">
-              <div className="flex ">
+              <div className="flex">
                 <div className="w-1/2 mr-6">
                   <Fieldset name="last_name" label="Nume">
                     <Field id="last_name" name="last_name" as={Input} autoComplete="off" />
