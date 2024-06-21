@@ -24,7 +24,7 @@ const EMPTY_RANGE = {
   endDate: new Date(''),
 };
 
-const DateRange = ({ onChange, options, ...props }) => {
+const DateRange = ({ onChange,isOnLogbook=false , options, ...props}) => {
   const [showDateRange, setShowDateRange] = useState(false);
   const defaultDate = options ? { startDate: options.from, endDate: options.to } : EMPTY_RANGE;
   const [range, setRange] = useState(defaultDate);
@@ -63,7 +63,7 @@ const DateRange = ({ onChange, options, ...props }) => {
       <div>
         <label className="label">Dată început</label>
         <div
-          className="input relative sm:w-48 flex items-center cursor-pointer h-11.5 p-3 tablet:w-56 laptop:w-80"
+          className={`input relative sm:w-48 flex items-center cursor-pointer h-11.5 p-3 tablet:w-56 ${isOnLogbook ? 'laptop:w-80' : ''}`}
           onClick={openDateRange}
         >
           <p className="tablet:text-xs">{isValidDate(range?.startDate) ? dateLocaleRo(range.startDate) : 'Alegeti o data'}</p>
@@ -73,7 +73,7 @@ const DateRange = ({ onChange, options, ...props }) => {
       <div>
         <label className="label">Dată sfârșit</label>
         <div
-          className="input relative sm:w-48 flex items-center cursor-pointer h-11.5 p-3 tablet:w-56 laptop:w-80"
+          className={`input relative sm:w-48 flex items-center cursor-pointer h-11.5 p-3 tablet:w-56 ${isOnLogbook ? 'laptop:w-80' : ''}`}
           onClick={openDateRange}
         >
           <p className="tablet:text-xs">{isValidDate(range?.endDate) ? dateLocaleRo(range?.endDate) : 'Alegeti o data'}</p>
@@ -83,15 +83,15 @@ const DateRange = ({ onChange, options, ...props }) => {
       <Modal
         className="flex items-center"
         size="lg"
-        dialogClassName="w-full mx-3 md:mx-auto md:w-5/12"
+        dialogClassName="w-full mx-3 sm:mx-auto lg:w-5/12"
         centered
         show={showDateRange}
         onHide={hideDateRange}
       >
-        <h2 className="py-6 px-6 text-2xl font-semibold dark:text-white">
+        <h2 className="py-6 px-6 text-2xl laptop:text-lg tablet:text-base font-semibold dark:text-white">
           Alegeți intervalul de timp
         </h2>
-        {/* For resolutions > 768px */}
+        {/* For resolutions > 640px */}
         <DateRangePicker
           onChange={handleChange}
           months={1}
@@ -186,12 +186,12 @@ const DateRange = ({ onChange, options, ...props }) => {
           ]}
           inputRanges={[]}
           rangeColors={['#53B0AE']}
-          className="pl-4 pr-6 h-full overscroll-auto md:flex"
+          className="pl-4 pr-6 h-full tablet:hidden flex"
         />
-        {/* For resolutions < 768px */}
+        {/* For resolutions < 640px */}
           <DateRangeMobile handleChange={handleChange} range={range}/>
-        <div className="flex mx-6 my-6 gap-4 justify-between flex-col md:flex-row ">
-          <div className="flex gap-4 flex-col md:flex-row">
+        <div className="flex mx-6 my-6 gap-4 justify-between flex-col lg:flex-row ">
+          <div className="flex gap-4 flex-col lg:flex-row">
             <button className="cancel" onClick={hideDateRange}>
               Anulează
             </button>
