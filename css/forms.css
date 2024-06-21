@@ -96,7 +96,7 @@ input[type='color'] {
 
 
 @media (max-width: 640px) {
-  .select::placeholder {
+  .select::placeholder,.input,.textarea {
     font-size: 0.75rem;
   }
 }

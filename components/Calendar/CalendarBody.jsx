@@ -85,7 +85,7 @@ const CalendarBody = ({
   return (
     <div>
       {role === 'user' && <UserCalendarAlert show={showAlert} setShow={setShowAlert} data={data} />}
-      {getWeekDaysNames(dates.startDate, showWeekend)}
+      <div className="md:block hidden">{getWeekDaysNames(dates.startDate, showWeekend)}</div>
       {getDates()}
     </div>
   );

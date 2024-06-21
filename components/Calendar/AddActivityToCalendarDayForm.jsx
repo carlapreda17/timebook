@@ -55,16 +55,16 @@ const AddActivityToCalendarDayForm = ({ hide, date, refetch }) => {
             <Field id="description" name="description" as={Textarea} rows={2} autoComplete="off" />
           </Fieldset>
 
-          <div className="flex flex-col sm:flex-row items-end justify-between">
+          <div className="flex flex-col sm:flex-row tablet:items-end justify-between">
             <Checkbox
               onChange={() => {
                 setCheckbox(!checkbox);
               }}
               className="form-checkbox rounded-full"
             >
-              <div className="w-40 dark:text-slate-200">Continuă sa adaugi</div>
+              <div className="w-40 dark:text-slate-200">Continuă să adaugi</div>
             </Checkbox>
-            <div className="grid grid-cols-2 sm:flex sm:flex-row flex-col sm:items-end gap-4">
+            <div className="grid grid-cols-2 tablet:mt-2 sm:flex sm:flex-row sm:items-end gap-4">
               <button className="cancel" onClick={hide} type="reset">
                 Anulează
               </button>

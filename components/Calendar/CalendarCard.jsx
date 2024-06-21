@@ -30,12 +30,14 @@ const CalendarCard = ({
         <div className="text-lg dark:text-gray-100 flex justify-between w-full px-2">
           {format(currentDate, 'd')} <FormatDuration duration={totalDuration} />
         </div>
-        <button
-          className="text-white bg-primary py-2 rounded-full cursor-pointer md:hidden block"
-          onClick={handleOpen}
-        >
-          <i className="fa-solid fa-plus" />
-        </button>
+        <div className="flex justify-center sm:justify-start">
+          <button
+            className="sm:w-1/3 tablet:w-full text-white bg-primary py-2 rounded-full cursor-pointer md:hidden block"
+            onClick={handleOpen}
+          >
+            <i className="fa-solid fa-plus mr-2"/> Adaugă activitate
+          </button>
+        </div>
       </div>
       {children}
     </div>

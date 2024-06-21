@@ -57,7 +57,7 @@ const CalendarDay = ({
         {(viewButton || new Date().getDate() === +format(currentDate, 'd')) && (
           <div
             className={classnames(
-              'hidden sm:flex gap-2 items-center p-3 py-2.5 mx-1 mb-4 rounded hover:bg-gray-200 cursor-pointer transition duration-100 dark:text-slate-300 dark:hover:bg-slate-700'
+              'hidden md:flex gap-2 items-center p-3 py-2.5 mx-1 mb-4 rounded hover:bg-gray-200 cursor-pointer transition duration-100 dark:text-slate-300 dark:hover:bg-slate-700'
             )}
             onClick={handleOpen}
           >
