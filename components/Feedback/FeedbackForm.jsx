@@ -45,16 +45,18 @@ const FeedbackForm = ({ hideModal }) => {
           <TypeSelect />
           <TitleInput />
           <FeedbackDescription />
-          <div className="flex flex-col md:flex-row md:justify-between">
-            <Checkbox
-              onChange={() => {
-                setCheckbox(!checkbox);
-              }}
-              className="form-checkbox rounded mt-6"
-            >
-              <div className="w-40 mt-6 dark:text-white">Continuă să adaugi</div>
-            </Checkbox>
-            <div className="flex sm:items-end flex-col sm:flex-row sm:gap-3 font-medium">
+          <div className="flex justify-between m-tablet:flex-col">
+           <div className="m-tablet:mb-3">
+             <Checkbox
+               onChange={() => {
+                 setCheckbox(!checkbox);
+               }}
+               className="form-checkbox rounded mt-6"
+             >
+               <div className="w-40 mt-6 dark:text-white">Continuă să adaugi</div>
+             </Checkbox>
+           </div>
+            <div className="flex sm:items-end flex-row gap-3 font-medium">
               <button className="cancel" onClick={hideModal} type="button">
                 Anulează
               </button>
