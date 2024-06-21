@@ -31,7 +31,7 @@ const ActiveFilter = ({ setOptions, defaultValue = '' }) => {
   };
 
   return (
-    <div className="w-1/3 lg:w-1/4 tablet:w-1/2">
+    <div className="w-1/3 lg:w-1/4 tablet:w-56">
       <label className="font-semibold mb-1">Tip persoane</label>
       <select className="select" onChange={handleChange} defaultValue={defaultValue}>
         <option value="">Toate</option>

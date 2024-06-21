@@ -25,7 +25,7 @@ const ProjectListFilters = ({ setOptions }) => {
   };
 
   return (
-    <div className="flex gap-6">
+    <div className="flex gap-6 tablet:grid">
       <ProjectListActiveFilter onChange={setActiveFilter} />
       <ProjectNameFilter onChange={setNameFilter} />
     </div>
