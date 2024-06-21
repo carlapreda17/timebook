@@ -7,9 +7,9 @@ const PollSuccess = ({ data, refetch, role }) => {
     <div>
       <PageHeader>
         <div className="flex items-center py-4 ">
-          <h1 className="font-bold text-2xl">{data.title}</h1>
+          <h1 className="font-bold text-2xl tablet:text-lg">{data.title}</h1>
         </div>
-        {data.description}
+        <p className="tablet:text-sm">{data.description}</p>
       </PageHeader>
       <div className="card max-w-2xl my-6 dark:text-white">
         {data.status === 'approved' ? (

@@ -52,9 +52,9 @@ const PollFormSingleAnswer = ({ poll, refetch, role }) => {
             totalVotes={poll.totalVotes}
             className="text-gray-500 text-sm dark:text-slate-400"
           />
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-5 tablet:flex-col">
             {poll.isAnonymous && (
-              <Tooltip icon="fa-solid fa-user-secret text-2xl text-primary dark:text-sky-500">
+              <Tooltip icon="fa-solid fa-user-secret text-2xl text-center tablet:text-3xl text-primary dark:text-sky-500">
                 Anonim
               </Tooltip>
             )}
