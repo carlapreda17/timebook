@@ -17,7 +17,7 @@ const Calendar = ({ role }) => {
   const [view, setView] = useState('monthly');
 
   return (
-    <div className="-mx-8">
+    <div className="-mx-8 laptop:mx-2 mobile:mx-1">
       <CalendarHeader
         dates={dates}
         setDates={setDates}

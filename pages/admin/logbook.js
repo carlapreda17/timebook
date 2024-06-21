@@ -30,7 +30,7 @@ const Page = () => {
         <div className="bg-primary text-white rounded-t-xl">
           <div className="flex flex-row items-center justify-between p-4">
             <h1 className="font-bold text-2xl mb-4">Logbook</h1>
-            <div className="flex tablet:grid gap-2">
+            <div className="flex gap-2">
               <AdminCalendarButton />
               <AddActivityButton onHideModal={refetch} />
             </div>

@@ -24,7 +24,7 @@ const CalendarTitle = ({ dates }) => {
     )}`;
   };
   return (
-    <h2 className="text-xl font-semibold">
+    <h2 className="text-xl tablet:text-base font-semibold">
       <span className="capitalize">{getTitle(dates.startDate, dates.endDate)}</span>
     </h2>
   );

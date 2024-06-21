@@ -20,7 +20,7 @@ const CalendarHeader = ({
 }) => {
   return (
     <div className="w-full flex flex-col gap-6 bg-primary text-white rounded-t-xl p-5">
-      <div className="flex flex-row items-center justify-between">
+      <div className="flex flex-row mobile:grid items-center justify-between">
         <div className="flex items-center gap-4">
           <CalendarHeaderArrows
             dates={dates}
@@ -33,7 +33,7 @@ const CalendarHeader = ({
         </div>
         <CalendarHeaderButtons role={role} refetch={refetch} />
       </div>
-      <div className="flex flex-col sm:flex-row justify-between gap-6">
+      <div className="flex flex-col md:flex-row justify-between gap-6">
         <CalendarHeaderFilters
           setOptions={setOptions}
           setShowWeekend={setShowWeekend}

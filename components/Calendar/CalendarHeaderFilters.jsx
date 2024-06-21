@@ -13,7 +13,7 @@ const CalendarHeaderFilters = ({ setOptions, setShowWeekend, showWeekend }) => {
     setShowWeekend(!showWeekend);
   };
   return (
-    <div className="flex flex-col sm:flex-row gap-4 sm:items-end">
+    <div className="flex flex-col md:flex-row gap-4 md:items-end">
       <ProjectFilter onChange={setProjectFilter} />
       <ShowWeekendDays onChange={handleShowWeekend} showWeekend={showWeekend} />
     </div>

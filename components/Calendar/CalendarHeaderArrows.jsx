@@ -59,11 +59,11 @@ const CalendarHeaderArrows = ({ dates, setDates, setOptions, options, view }) =>
   return (
     <div>
       <i
-        className="fa-solid fa-chevron-left text-lg text-gray-400 cursor-pointer mr-4"
+        className="fa-solid fa-chevron-left text-lg tablet:text-sm text-gray-400 cursor-pointer mr-4"
         onClick={handleGoBack}
       />{' '}
       <i
-        className="fa-solid fa-chevron-right text-lg text-gray-400 cursor-pointer"
+        className="fa-solid fa-chevron-right text-lg tablet:text-sm text-gray-400 cursor-pointer"
         onClick={handleGoForward}
       />
     </div>
