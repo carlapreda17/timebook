@@ -63,20 +63,20 @@ const DateRange = ({ onChange, options, ...props }) => {
       <div>
         <label className="label">Dată început</label>
         <div
-          className="input relative sm:w-48 flex items-center cursor-pointer h-11.5 p-3"
+          className="input relative sm:w-48 flex items-center cursor-pointer h-11.5 p-3 tablet:w-56 laptop:w-80"
           onClick={openDateRange}
         >
-          <p>{isValidDate(range?.startDate) ? dateLocaleRo(range.startDate) : 'Alegeti o data'}</p>
+          <p className="tablet:text-xs">{isValidDate(range?.startDate) ? dateLocaleRo(range.startDate) : 'Alegeti o data'}</p>
           <i className="fas fa-calendar text-lg ml-4 absolute right-3 text-gray-500 dark:text-slate-600" />
         </div>
       </div>
       <div>
         <label className="label">Dată sfârșit</label>
         <div
-          className="input relative sm:w-48 flex items-center cursor-pointer h-11.5 p-3"
+          className="input relative sm:w-48 flex items-center cursor-pointer h-11.5 p-3 tablet:w-56 laptop:w-80"
           onClick={openDateRange}
         >
-          <p>{isValidDate(range?.endDate) ? dateLocaleRo(range?.endDate) : 'Alegeti o data'}</p>
+          <p className="tablet:text-xs">{isValidDate(range?.endDate) ? dateLocaleRo(range?.endDate) : 'Alegeti o data'}</p>
           <i className="fas fa-calendar text-lg ml-4 absolute right-3 text-gray-500 dark:text-slate-600" />
         </div>
       </div>
@@ -186,7 +186,7 @@ const DateRange = ({ onChange, options, ...props }) => {
           ]}
           inputRanges={[]}
           rangeColors={['#53B0AE']}
-          className="pl-4 pr-6 h-full overscroll-auto hidden md:flex"
+          className="pl-4 pr-6 h-full overscroll-auto md:flex"
         />
         {/* For resolutions < 768px */}
           <DateRangeMobile handleChange={handleChange} range={range}/>

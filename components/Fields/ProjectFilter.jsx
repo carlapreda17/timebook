@@ -16,7 +16,7 @@ const ProjectFilter = ({ onChange, value }) => {
   };
 
   return (
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1 tablet:w-56 laptop:w-80">
       <div className="flex items-center gap-2">
         <i className="fa-solid fa-magnifying-glass"></i>
         <label className="font-medium">Nume proiect</label>
