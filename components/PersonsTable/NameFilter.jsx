@@ -14,10 +14,10 @@ const NameFilter = ({ setOptions }) => {
   };
 
   return (
-    <div className="w-1/3 lg:w-1/4">
-      <label className="font-semibold mb-1 block">Nume persoana</label>
+    <div className="w-1/3 lg:w-1/4 tablet:w-1/2">
+      <label className="font-semibold mb-1 block">Nume persoană</label>
       <DebouncedInput
-        placeholder="Cauta dupa nume"
+        placeholder="Caută dupa nume"
         className="select"
         onChange={handleChange}
         timeout={500}

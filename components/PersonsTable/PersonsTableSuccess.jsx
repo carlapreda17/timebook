@@ -10,18 +10,18 @@ const PersonsTableSuccess = ({ data, refetch }) => {
 
     return (
       <tr className="table-row" key={`person-row-${_id}`}>
-        <td className="p-3">
+        <td className="p-3 tablet:w-1/5 tablet:text-xs">
           <UserLink {...person} />
         </td>
-        <td className="p-3 w-80">{job}</td>
-        <td className="p-3 w-80">{email}</td>
-        <td className="p-3 w-32">
+        <td className="p-3 w-80 tablet:w-1/5 tablet:text-xs">{job}</td>
+        <td className="p-3 w-80 tablet:w-1/5 tablet:text-xs">{email}</td>
+        <td className="p-3 w-32 tablet:w-1/5 tablet:text-xs">
           <BirthdayTooltip birthday={birthday}>
-            <PersonAge birthday={birthday} />
+            <PersonAge birthday={birthday}/>
           </BirthdayTooltip>
         </td>
-        <td className="p-3 w-20">
-          <PersonRowActions refetch={refetch} person={person} />
+        <td className="p-3 w-20 tablet:w-1/5">
+          <PersonRowActions refetch={refetch} person={person}/>
         </td>
       </tr>
     );
@@ -29,11 +29,13 @@ const PersonsTableSuccess = ({ data, refetch }) => {
 
   return (
     <div className="flex flex-col w-full">
-      <table className="min-w-full">
-        <PersonsTableHead />
-        <tbody>{data.map(showPerson)}</tbody>
-      </table>
-      {!data?.length && <MessageNoRows />}
+      <div className="overflow-x-auto">
+        <table className="min-w-full whitespace-nowrap">
+          <PersonsTableHead/>
+          <tbody>{data.map(showPerson)}</tbody>
+        </table>
+      </div>
+      {!data?.length && <MessageNoRows/>}
     </div>
   );
 };
