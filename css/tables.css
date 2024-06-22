@@ -5,3 +5,7 @@
 .table-row {
   @apply bg-white border-b dark:text-slate-300 dark:bg-slate-800 dark:border-b-slate-700 !important;
 }
+
+.table-loading {
+  @apply h-4 my-1 bg-gray-300 rounded-lg animate-pulse !important;
+}

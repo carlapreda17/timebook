@@ -8,7 +8,7 @@ const AddVacationButton = () => {
         type="button"
       >
         <i className="fas fa-plus" />
-        <span className="ml-2  inline">Adauga concediu</span>
+        <span className="ml-2 inline">Adauga concediu</span>
       </button>
     </Link>
   );

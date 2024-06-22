@@ -1,6 +1,6 @@
 import {UserTimesheetButton} from '.';
 import { LogbookButton } from '.';
-import {AddActivityButton} from "../LogbookTable";
+import AddActivityButton from "../AddActivityButton";
 
 const CalendarHeaderButtons = ({ role, refetch }) => {
   return (
