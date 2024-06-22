@@ -32,7 +32,7 @@ const AddPollForm = () => {
     >
       <Form className="w-fit">
         <div className="flex flex-col tablet:items-center gap-2 md:flex-row">
-          <div className="card max-w-md flex flex-col gap-4 h-fit">
+          <div className="card tablet:w-full max-w-md flex flex-col gap-4 h-fit">
             <PollTitle />
             <PollDescription />
             <PollQuestion />
@@ -43,9 +43,7 @@ const AddPollForm = () => {
               Adaugă
             </Submit>
           </div>
-          <div className="max-w-md">
             <AddOptionField />
-          </div>
         </div>
         <div className="w-full">
           <Submit className="block mt-4 md:hidden w-full h-fit max-w-md text-base px-6">Adaugă</Submit>

@@ -38,7 +38,7 @@ const AddOptionField = () => {
     setErrors({ ...errors, options: 'Toate campurile trebuie completate!' });
 
   return (
-    <div className={classnames('card max-w-md h-fit')}>
+    <div className={classnames('card max-w-md tablet:w-full h-fit')}>
       <div className="flex relative pb-4">
         <Button
           onClick={handleAddItem}

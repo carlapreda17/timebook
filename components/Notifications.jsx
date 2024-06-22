@@ -18,7 +18,7 @@ const Notifications = () => {
       </div>
 
       {isOpen && (
-        <div className="absolute sm:top-12 top-16 sm:-right-44 sm:left-auto left-0 sm:w-96 w-[100vw] tablet:w-11/12 tablet:-translate-x-1/2 tablet:left-1/2 border bg-white overflow-hidden sm:rounded-lg rounded-b-lg shadow-lg z-50 dark:border-slate-700 dark:bg-slate-800">
+        <div className="absolute sm:top-12 top-16 sm:-right-44 sm:left-auto left-0 sm:w-96 w-[100vw] tablet:w-11/12 tablet:-translate-x-1/2 tablet:left-1/2 border bg-white overflow-hidden rounded-lg rounded-b-lg shadow-lg z-50 dark:border-slate-700 dark:bg-slate-800">
           <NotificationsMenu />
         </div>
       )}

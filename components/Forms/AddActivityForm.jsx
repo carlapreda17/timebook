@@ -43,10 +43,10 @@ const AddActivityForm = ({ hideModal }) => {
       >
         <Form className="flex flex-col space-y-4">
           <div className="flex mobile:flex-col">
-            <div className="w-1/2 mr-6">
+            <div className="w-1/2 mr-6 mobile:w-full">
               <ActivityDate />
             </div>
-            <div className="w-1/2 mobile:mt-4">
+            <div className="w-1/2 mobile:w-full mobile:mt-4">
               <ActivityDuration />
             </div>
           </div>

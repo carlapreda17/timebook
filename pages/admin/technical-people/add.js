@@ -45,23 +45,23 @@ const Page = () => {
             onSubmit={handleSubmit}
           >
             <Form className="flex flex-col space-y-4">
-              <div className="flex">
-                <div className="w-1/2 mr-6">
+              <div className="flex flex-row mobile:flex-col">
+                <div className="w-1/2 mobile:mt-4 mr-6 mobile:w-full">
                   <Fieldset name="last_name" label="Nume">
                     <Field id="last_name" name="last_name" as={Input} autoComplete="off" />
                   </Fieldset>
                 </div>
-                <div className="w-1/2">
+                <div className="w-1/2 mobile:mt-4 mobile:w-full">
                   <Fieldset name="first_name" label="Prenume">
                     <Field id="first_name" name="first_name" as={Input} autoComplete="off" />
                   </Fieldset>
                 </div>
               </div>
-              <div className="flex">
-                <div className="w-1/2 mr-6">
+              <div className="flex flex-col sm:flex-row">
+                <div className="w-1/2 mobile:mt-4 mr-6 mobile:w-full">
                   <Birthday />
                 </div>
-                <div className="w-1/2">
+                <div className="w-1/2 tablet:mt-4 mobile:w-full">
                   <Fieldset name="job" label="Pozitie in cadrul companiei">
                     <Field id="job" name="job" as={Input} autoComplete="off" />
                   </Fieldset>
@@ -70,8 +70,8 @@ const Page = () => {
               <Fieldset name="email" label="E-mail">
                 <Field id="email" name="email" as={Email} autoComplete="new-email" />
               </Fieldset>
-              <div className="flex">
-                <div className="w-1/2 mr-6">
+              <div className="flex flex-row mobile:flex-col">
+                <div className="w-1/2 mr-6 mobile:mt-4 mobile:w-full">
                   <Fieldset name="password" label="Parola">
                     <div className="mb-1" />
                     <div className="relative">
@@ -93,7 +93,7 @@ const Page = () => {
                     </div>
                   </Fieldset>
                 </div>
-                <div className="w-1/2">
+                <div className="w-1/2 mobile:mt-4 mobile:w-full">
                   <Fieldset name="password_confirm" label="Confirmă parola">
                     <div className="mb-1" />
                     <div className="relative">
@@ -110,14 +110,14 @@ const Page = () => {
                   </Fieldset>
                 </div>
               </div>
-              <div className="flex gap-4 items-end justify-between">
-                <Link href="/admin/technical-people">
-                  <a className="cancel">
-                    <i className="fas fa-arrow-left"></i>
-                    <span className="ml-2 ">înapoi la persoane</span>
-                  </a>
-                </Link>
-                <Submit className="confirm">
+              <div className="flex flex-col sm:flex-row gap-4 sm:items-end justify-between">
+                  <Link href="/admin/technical-people">
+                    <a className="cancel text-center">
+                      <i className="fas fa-arrow-left"></i>
+                      <span className="ml-2">înapoi la persoane</span>
+                    </a>
+                  </Link>
+                <Submit className="confirm grow">
                   <i className="fas fa-plus"></i>
                   <span className="ml-2">Adauga persoana</span>
                 </Submit>
