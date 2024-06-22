@@ -73,3 +73,7 @@ button:disabled {
 .delete {
   @apply px-5 py-1.5 border-2 border-red-600 text-base text-white bg-red-600 hover:border-red-500 hover:bg-red-500 rounded-md !important;
 }
+
+.handle_project{
+  @apply flex items-center p-2.5 text-white text-base gap-2 rounded-lg tablet:justify-center
+}

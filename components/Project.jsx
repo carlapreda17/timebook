@@ -101,36 +101,36 @@ const Project = ({ data }) => {
             ></WordpressCounterBox>
           </div>
         </div>
-        <div className="flex justify-between tablet:grid">
-          <div className="flex gap-6 tablet:gap-3">
+        <div className="flex justify-between tablet:grid-cols-1 tablet:grid tablet:gap-3">
+          <div className="flex gap-6 tablet:grid tablet:gap-3">
             <Link href={`/admin/timesheets/projects/${data.project._id}`}>
-              <button className="flex items-center p-2.5 bg-primary text-white text-base gap-2 rounded-lg tablet:text-sm">
+              <button className="bg-primary handle_project">
                 <i className="fas fa-clock tablet:text-base" />
                 Arata Timesheet
               </button>
             </Link>
             <Link href={`/admin/projects/${data.project._id}/edit`}>
-              <button className="flex items-center p-2.5 bg-secondary text-white text-base gap-2 rounded-lg tablet:text-sm">
+              <button className="bg-secondary handle_project">
                 <i className="fas fa-edit tablet:text-base" />
                 Editeaza proiect
               </button>
             </Link>
           </div>
           {data.project.active && (
-            <button
-              className="flex items-center p-2.5 bg-accent text-white text-base gap-2 rounded-lg tablet:text-sm tablet:justify-center tablet:mt-3"
-              onClick={handleClick}
-            >
-              <i className="fas fa-trash tablet:text-base" />
-              Șterge proiect
-            </button>
+              <button
+                className="bg-accent handle_project"
+                onClick={handleClick}
+              >
+                <i className="fas fa-trash tablet:text-base"/>
+                Șterge proiect
+              </button>
           )}
           {!data.project.active && (
             <button
-              className="flex items-center p-2.5 bg-secondary text-white text-base gap-2 rounded-lg tablet:text-sm"
+              className="bg-accent handle_project"
               onClick={handleClick}
             >
-              <i className="fas fa-arrow-up" />
+              <i className="fas fa-arrow-up"/>
               Reactiveaza proiect
             </button>
           )}
