@@ -20,7 +20,7 @@ const AddActivityButton = ({ onHideModal }) => {
         onClick={showModal}
       >
         <i className="fas fa-plus" />
-        <span className="ml-2 hidden md:inline">Adauga activitate</span>
+        <span className="ml-2 hidden md:inline">Adaugă activitate</span>
       </button>
       <Modal centered show={isOpen} onHide={hideModal}>
         <AddActivityForm hideModal={hideModal} />
