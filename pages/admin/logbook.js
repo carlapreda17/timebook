@@ -2,7 +2,6 @@ import { checkAuth, withAuth } from '../../auth';
 import { Layout, LoadMore } from '../../components';
 import { useState } from 'react';
 import {
-  AddActivityButton,
   LogbookFilters,
   LogbookTableError,
   LogbookTableLoading,
@@ -11,6 +10,7 @@ import {
   AdminCalendarButton,
 } from '../../components/LogbookTable';
 import { useInfiniteQuery, useQuery } from '../../hooks';
+import AddActivityButton from '../../components/AddActivityButton';
 import ExportButton from '../../components/ExportButton';
 
 const Page = () => {
@@ -32,7 +32,7 @@ const Page = () => {
             <h1 className="font-bold text-2xl mb-4">Logbook</h1>
             <div className="flex gap-2">
               <AdminCalendarButton />
-              <AddActivityButton onHideModal={refetch} />
+              <AddActivityButton onHideModal={refetch} isOnLogbook={true} />
             </div>
           </div>
           <div className="p-4">

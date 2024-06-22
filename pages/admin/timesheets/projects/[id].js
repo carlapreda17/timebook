@@ -2,7 +2,7 @@ import { withAuth, checkAuth } from '../../../../auth';
 import { Layout, LoadMore, withRouter } from '../../../../components';
 import { useState } from 'react';
 import { useInfiniteQuery } from '../../../../hooks';
-import AddActivityButton from '../../../../components/ProjectTable/AddActivityButton';
+import AddActivityButton from '../../../../components/AddActivityButton';
 import ProjectTitle from '../../../../components/ProjectTable/ProjectTitle';
 import ProjectFilters from '../../../../components/ProjectTable/ProjectFilters';
 import SelectedRowsArea from '../../../../components/ProjectTable/SelectedRowsArea';
@@ -41,7 +41,7 @@ const Page = ({ id }) => {
           </div>
           <div className="p-4">
             {selectedRows.length === 0 && (
-              <div className="flex justify-between items-end">
+              <div className="flex justify-between tablet:grid items-end">
                 <ProjectFilters setOptions={setOptions} setSelectedPerson={setSelectedPerson} />
                 {status === 'success' && data.pages.length > 0 && (
                   <ExportButton

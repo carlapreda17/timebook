@@ -1,8 +1,6 @@
 import ActivityDate from './ActivityDate';
-
 import ActivityRowContextMenu from './ActivityRowContextMenu';
 import ActivityRowModals from './ActivityRowModals';
-import AddActivityButton from './AddActivityButton';
 import ConfirmModal from './ConfirmModal';
 import EditActivityModal from './EditActivityModal';
 import LogbookFilters from './LogbookFilters';
@@ -23,7 +21,6 @@ export {
   ActivityDate,
   ActivityRowContextMenu,
   ActivityRowModals,
-  AddActivityButton,
   ConfirmModal,
   EditActivityModal,
   LogbookFilters,

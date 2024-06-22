@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Modal } from 'react-bootstrap';
-import AddActivityForm from '../Forms/AddActivityForm';
+import AddActivityForm from './Forms/AddActivityForm';
+import AddActivityToProjectForm from "./Forms/AddActivityToProjectForm";
 
-const AddActivityButton = ({ onHideModal }) => {
+const AddActivityButton = ({ onHideModal, projectId, isOnLogbook=false }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const showModal = () => setIsOpen(true);
@@ -23,7 +24,11 @@ const AddActivityButton = ({ onHideModal }) => {
         <span className="ml-2 hidden md:inline">Adaugă activitate</span>
       </button>
       <Modal centered show={isOpen} onHide={hideModal}>
-        <AddActivityForm hideModal={hideModal} />
+        {isOnLogbook ? (
+          <AddActivityForm hideModal={hideModal} />
+        ) : (
+          <AddActivityToProjectForm hideModal={hideModal} projectId={projectId} />
+        )}
       </Modal>
     </>
   );
