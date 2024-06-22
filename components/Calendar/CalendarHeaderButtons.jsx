@@ -1,14 +1,22 @@
-import { CalendarHeaderButtonsUser, CalendarHeaderButtonsAdmin } from '.';
+import {UserTimesheetButton} from '.';
+import { LogbookButton } from '.';
+import {AddActivityButton} from "../LogbookTable";
 
 const CalendarHeaderButtons = ({ role, refetch }) => {
   return (
-    <>
+    <div className="flex gap-2 mobile:mt-3">
       {role === 'admin' ? (
-        <CalendarHeaderButtonsAdmin onHideModal={refetch} />
+        <>
+          <LogbookButton/>
+          <AddActivityButton onHideModal={refetch}/>
+        </>
       ) : (
-        <CalendarHeaderButtonsUser onHideModal={refetch} />
+        <>
+          <UserTimesheetButton/>
+          <AddActivityButton onHideModal={refetch}/>
+        </>
       )}
-    </>
+    </div>
   );
 };
 

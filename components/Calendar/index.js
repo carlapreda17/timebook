@@ -14,8 +14,6 @@ import CalendarDayActivites from './CalendarDayActivites';
 import CalendarDayActivityTooltip from './CalendarDayActivityTooltip';
 import CalendarHeaderFilters from './CalendarHeaderFilters';
 import CalendarHeaderButtons from './CalendarHeaderButtons';
-import CalendarHeaderButtonsUser from './CalendarHeaderButtonsUser';
-import CalendarHeaderButtonsAdmin from './CalendarHeaderButtonsAdmin';
 import UserTimesheetButton from './UserTimesheetButton';
 import MonthlyViewActivity from './MonthlyViewActivity';
 import LogbookButton from './LogbookButton';
@@ -46,8 +44,6 @@ export {
   CalendarDayActivityTooltip,
   CalendarHeaderFilters,
   CalendarHeaderButtons,
-  CalendarHeaderButtonsUser,
-  CalendarHeaderButtonsAdmin,
   UserTimesheetButton,
   MonthlyViewActivity,
   LogbookButton,
