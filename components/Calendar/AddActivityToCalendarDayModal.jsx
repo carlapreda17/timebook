@@ -1,17 +1,16 @@
 import { format } from 'date-fns';
 import { Modal } from 'react-bootstrap';
 import { AddActivityToCalendarDayForm } from '.';
-import { AddActivityToCalendarDayUser } from '../UserCalendar';
+import { useProfile } from '../../hooks';
+
 
 const AddActivityToCalendarDayModal = ({ show, hide, date, refetch, role }) => {
   const currentDate = format(date, 'yyyy-MM-dd');
+  const { me } = useProfile();
+  const userId = role === 'user' ? me.me : null;
   return (
     <Modal centered show={show} onHide={hide}>
-      {role === 'admin' ? (
-        <AddActivityToCalendarDayForm hide={hide} date={currentDate} refetch={refetch} />
-      ) : (
-        <AddActivityToCalendarDayUser hide={hide} date={currentDate} refetch={refetch} />
-      )}
+        <AddActivityToCalendarDayForm hide={hide} date={currentDate} refetch={refetch} role={role} userId={userId} />
     </Modal>
   );
 };

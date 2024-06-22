@@ -42,11 +42,11 @@ const AddActivityForm = ({ hideModal }) => {
         }
       >
         <Form className="flex flex-col space-y-4">
-          <div className="flex">
+          <div className="flex mobile:flex-col">
             <div className="w-1/2 mr-6">
               <ActivityDate />
             </div>
-            <div className="w-1/2">
+            <div className="w-1/2 mobile:mt-4">
               <ActivityDuration />
             </div>
           </div>
@@ -63,7 +63,7 @@ const AddActivityForm = ({ hideModal }) => {
             />
           </Fieldset>
 
-          <div className="flex justify-between mt-4">
+          <div className="flex flex-col sm:flex-row justify-between mt-4">
             <Checkbox
               onChange={() => {
                 setCheckbox(!checkbox);
@@ -72,15 +72,15 @@ const AddActivityForm = ({ hideModal }) => {
             >
               <div className="w-40">Continuă să adaugi</div>
             </Checkbox>
-            <div className="flex gap-4">
+            <div className="flex gap-4 tablet:mt-2 mobile:flex-col">
               <button
-                className="px-5 py-2 bg-accent text-white rounded-md"
+                className="px-5 py-2 bg-accent text-white rounded-md mobile:w-full"
                 onClick={hideModal}
                 type="reset"
               >
                 Anulează
               </button>
-              <Submit className="px-5 py-2 bg-primary text-white rounded-md">Confirmă</Submit>
+              <Submit className="px-5 py-2 bg-primary text-white rounded-md mobile:w-full">Confirmă</Submit>
             </div>
           </div>
         </Form>
