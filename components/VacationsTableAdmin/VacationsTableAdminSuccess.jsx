@@ -8,7 +8,7 @@ const VacationsTableAdminSuccess = ({ data, refetch }) => {
   const showVacations = (data) => {
     return (
       <tr className="table-row" key={data._id}>
-        <td className="p-3 w-64 tablet:w-50">
+        <td className="p-3 w-64 tablet:w-50 tablet:text-xs">
           <PersonLink data={data} />
         </td>
         <td className="p-3 min-w-40 tablet:text-xs">{dateLocaleRo(data.startDate)}</td>

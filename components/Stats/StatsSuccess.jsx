@@ -5,38 +5,37 @@ import ChartStats from './ChartStats';
 const StatsSuccess = ({ data, setRangeFilter, options }) => {
   return (
     <article className="flex flex-col items-center gap-4">
-      <section className="bg-primary text-white rounded-t-xl flex gap-20 w-full">
-        <div>
-          <div className="flex flex-row items-center p-4">
-            <h1 className="font-bold text-2xl ">
+      <div className="bg-primary text-white rounded-t-xl flex gap-20 w-full">
+        <div className="p-4">
+          <div className="flex flex-row items-center tablet:grid justify-between">
+            <h1 className="header-title">
               {data.lastName} {data.firstName}
             </h1>
-          </div>
-          <div className="p-4">
-            <div className="flex justify-between items-end">
-              <DateRange className="flex gap-5" onChange={setRangeFilter} options={options} />
+            <div>
+              <span className="block text-lg tablet:mt-2 tablet:text-sm">
+                Ore lucrate -{' '}
+                {data.totalHoursWorked.total >= 0
+                  ? data.totalHoursWorked.total
+                  : `(${Math.abs(data.totalHoursWorked.total)})`}
+              </span>
+              <span className="block text-lg tablet:mt-2 tablet:text-sm">
+                Ore lucrabile ramase -{' '}
+                {data.remainedWorkableHours >= 0
+                  ? data.remainedWorkableHours
+                  : `(${Math.abs(data.remainedWorkableHours)})`}
+              </span>
             </div>
           </div>
+          <div className="flex justify-between tablet:grid items-end tablet:mt-4">
+            <DateRange className="flex gap-5 tablet:grid" onChange={setRangeFilter} options={options}/>
+          </div>
         </div>
-        <div className="p-4">
-          <span className="block text-lg">
-            Ore lucrate -{' '}
-            {data.totalHoursWorked.total >= 0
-              ? data.totalHoursWorked.total
-              : `(${Math.abs(data.totalHoursWorked.total)})`}
-          </span>
-          <span className="block text-lg">
-            Ore lucrabile ramase -{' '}
-            {data.remainedWorkableHours >= 0
-              ? data.remainedWorkableHours
-              : `(${Math.abs(data.remainedWorkableHours)})`}
-          </span>
-        </div>
-      </section>
+      </div>
+
       <>
         {!(data.totalHoursWorked.total > 0) && (
           <div className="w-full">
-            <MessageNoRows message={'Date insuficiente pentru raport in intervalul ales.'} />
+            <MessageNoRows message={'Date insuficiente pentru raport in intervalul ales.'}/>
           </div>
         )}
         {data.totalHoursWorked.total > 0 && <ChartStats data={data} {...options} />}

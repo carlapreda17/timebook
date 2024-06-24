@@ -124,8 +124,8 @@ const ChartStats = ({ data, from, to }) => {
 
   return (
     <section className="w-full flex-col gap-2">
-      <div className="flex gap-2 w-full mb-4">
-        <div className="w-1/3 bg-white rounded-lg shadow-lg p-4">
+      <div className="flex gap-2 w-full mb-4 tablet:grid">
+        <div className="w-1/3 bg-white rounded-lg shadow-lg p-4 tablet:w-full">
           <PieChartHours
             label="Ore lucrate dupa proiect"
             labels={data.totalHoursWorked.perProject.map((project) => project.name)}
@@ -134,7 +134,7 @@ const ChartStats = ({ data, from, to }) => {
           />
         </div>
         {labels.length > 1 && labels.length <= 31 && (
-          <div className="w-2/3 h-full bg-white rounded-lg shadow-lg p-4">
+          <div className="w-2/3 h-full bg-white rounded-lg shadow-lg p-4 tablet:w-full">
             <LineChart
               label="Ore lucrate pe zile"
               labels={labels}
