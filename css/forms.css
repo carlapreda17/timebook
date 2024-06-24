@@ -87,7 +87,7 @@ input[type='color'] {
 
 .input,
 .textarea {
-  @apply w-full bg-gray-50 rounded-md border-0 outline-none p-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm dark:bg-slate-800 dark:ring-slate-700 dark:focus:ring-sky-500 dark:text-slate-200 !important;
+  @apply w-full bg-gray-50 rounded-md border-0 outline-none p-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm dark:bg-slate-800 dark:ring-slate-700 dark:focus:ring-sky-500 dark:text-slate-200 mobile:pr-6 mobile:p-2 !important;
 }
 
 .select {

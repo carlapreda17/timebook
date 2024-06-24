@@ -63,7 +63,7 @@ button:disabled {
 }
 
 .cancel {
-  @apply px-5 py-1.5 bg-white border-2 border-gray-200 text-gray-600 hover:text-gray-800 hover:bg-gray-100 text-base rounded-md dark:text-white dark:hover:text-slate-200 dark:border-slate-600 dark:hover:bg-slate-600 dark:bg-slate-700 !important;
+  @apply px-5 py-1.5 bg-accent font-medium hover:bg-accentLight hover:border-accentLight border-2 border-accent text-white rounded-md !important;
 }
 
 .confirm {

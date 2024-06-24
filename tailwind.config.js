@@ -7,6 +7,7 @@ module.exports = {
         primary: '#0F4C81',
         secondary: '#53B0AE',
         accent: '#F74371',
+        accentLight: '#fa4d79',
       },
       screens: {
         'wide': '1950px',

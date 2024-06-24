@@ -13,6 +13,7 @@ import { updatePerson } from '../../../../api/persons';
 import { toaster } from '../../../../lib';
 import UpdatePersonLoading from '../../../../components/Forms/UpdatePersonLoading';
 import UpdatePersonError from '../../../../components/Forms/UpdatePersonError';
+import PersonForm from "../../../../components/Forms/PersonForm";
 
 const Page = () => {
   const router = useRouter();
@@ -37,44 +38,7 @@ const Page = () => {
         {status === 'loading' && <UpdatePersonLoading />}
         {status === 'error' && <UpdatePersonError />}
         {status === 'success' && (
-          <Formik validationSchema={validationSchema} onSubmit={handleSubmit} initialValues={data}>
-            <Form className="flex flex-col space-y-4">
-              <div className="flex ">
-                <div className="w-1/2 mr-6">
-                  <Fieldset name="last_name" label="Nume">
-                    <Field id="last_name" name="last_name" as={Input} autoComplete="off" />
-                  </Fieldset>
-                </div>
-                <div className="w-1/2">
-                  <Fieldset name="first_name" label="Prenume">
-                    <Field id="first_name" name="first_name" as={Input} autoComplete="off" />
-                  </Fieldset>
-                </div>
-              </div>
-              <div className="flex">
-                <div className="w-1/2 mr-6">
-                  <Birthday />
-                </div>
-                <div className="w-1/2">
-                  <Fieldset name="job" label="Poziție în cadrul companiei">
-                    <Field id="job" name="job" as={Input} autoComplete="off" />
-                  </Fieldset>
-                </div>
-              </div>
-              <Fieldset name="email" label="E-mail">
-                <Field id="email" name="email" as={Email} autoComplete="off" />
-              </Fieldset>
-              <div className="flex items-center justify-between gap-4">
-                <Link href={`/admin/technical-people/${id}`}>
-                  <button className="cancel" type="button">
-                    <i className="fas fa-arrow-left"></i>
-                    <span className="ml-2">Înapoi la persoana</span>
-                  </button>
-                </Link>
-                <Submit className="confirm">Salvează</Submit>
-              </div>
-            </Form>
-          </Formik>
+          <PersonForm onSubmit={handleSubmit} initialValues={data}></PersonForm>
         )}
       </div>
     </Layout>
