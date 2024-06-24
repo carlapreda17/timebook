@@ -60,9 +60,9 @@ const ProjectTimesheetSuccess = ({ data, project, refetch }) => {
           </button>
         </div>
 
-        <div className="px-2 md:px-5 pt-5">
+        <div className="table-wrapper">
           {data.pageParams.count > 0 && (
-            <table className="min-w-full">
+            <table className="table-container">
               <tr className="border-b bg-primary">
                 <th className="p-3">
                   <Checkbox

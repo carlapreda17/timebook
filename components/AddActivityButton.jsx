@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import AddActivityForm from './Forms/AddActivityForm';
-import AddActivityToProjectForm from "./Forms/AddActivityToProjectForm";
 
 const AddActivityButton = ({ onHideModal, projectId, isOnLogbook=false }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +26,7 @@ const AddActivityButton = ({ onHideModal, projectId, isOnLogbook=false }) => {
         {isOnLogbook ? (
           <AddActivityForm hideModal={hideModal} />
         ) : (
-          <AddActivityToProjectForm hideModal={hideModal} projectId={projectId} />
+          <AddActivityForm hideModal={hideModal} projectId={projectId} />
         )}
       </Modal>
     </>

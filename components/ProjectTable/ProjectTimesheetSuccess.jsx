@@ -81,8 +81,8 @@ const ProjectTimesheetSuccess = ({ data, refetch, selectedRows, setSelectedRows 
   };
 
   return (
-    <div className="flex flex-col w-full">
-      <table className="min-w-full">
+    <div className="table-wrapper">
+      <table className="table-container">
         <ProjectTimesheetTableHead toggleAll={toggleAll} checked={allRowsSelected} />
         <tbody>
           <tr className="bg-primary w-full">
@@ -100,9 +100,15 @@ const ProjectTimesheetSuccess = ({ data, refetch, selectedRows, setSelectedRows 
             <td></td>
           </tr>
           {Object.keys(groupedData).map(renderDays)}
+          {!data?.length && (
+            <tr>
+              <td colSpan="7">
+                <MessageNoRows />
+              </td>
+            </tr>
+          )}
         </tbody>
       </table>
-      {!data?.length && <MessageNoRows />}
     </div>
   );
 };

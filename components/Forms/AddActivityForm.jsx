@@ -8,8 +8,9 @@ import ActivityDate from '../Activities/ActivityDate';
 import { createActivity } from '../../api/activities';
 import { toaster } from '../../lib';
 import { useState } from 'react';
+import InvisibleProjectID from "../Activities/InvisibleProjectID";
 
-const AddActivityForm = ({ hideModal }) => {
+const AddActivityForm = ({ hideModal, projectId }) => {
   const handleSubmit = async (values, resetForm, setFieldValue) => {
     try {
       await createActivity(values);
@@ -18,6 +19,8 @@ const AddActivityForm = ({ hideModal }) => {
         let date = values.date;
         resetForm();
         setFieldValue('date', date);
+        if(projectId)
+          setFieldValue('project', projectId);
       } else if (typeof hideModal === 'function') {
         hideModal();
       }
@@ -51,7 +54,7 @@ const AddActivityForm = ({ hideModal }) => {
             </div>
           </div>
           <SelectPerson />
-          <SelectProject />
+          {!projectId && <SelectProject />}
           <Fieldset name="description" label="Descriere">
             <Field
               id="description"
@@ -83,6 +86,7 @@ const AddActivityForm = ({ hideModal }) => {
               <Submit className="px-5 py-2 bg-primary text-white rounded-md mobile:w-full">Confirmă</Submit>
             </div>
           </div>
+          {projectId && <InvisibleProjectID id={projectId} />}
         </Form>
       </Formik>
     </div>

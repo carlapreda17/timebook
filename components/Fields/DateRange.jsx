@@ -63,7 +63,7 @@ const DateRange = ({ onChange,isOnLogbook=false ,isProjectPage=false, options, .
       <div>
         <label className="label">Dată început</label>
         <div
-          className={`input relative flex items-center cursor-pointer h-11.5 p-3 tablet:w-56 ${isOnLogbook || isProjectPage ? 'laptop:w-80' : ''} ${!isProjectPage ? 'sm:w-48' : ''}`}
+          className={`input relative flex items-center cursor-pointer h-11.5 p-3 tablet:w-56 ${isOnLogbook || isProjectPage ? 'laptop:w-80' : ''} ${!isProjectPage ? 'sm:w-48' : 'sm:w-56'}`}
           onClick={openDateRange}
         >
           <p className="tablet:text-xs">{isValidDate(range?.startDate) ? dateLocaleRo(range.startDate) : 'Alegeti o data'}</p>
@@ -73,7 +73,7 @@ const DateRange = ({ onChange,isOnLogbook=false ,isProjectPage=false, options, .
       <div>
         <label className="label">Dată sfârșit</label>
         <div
-          className={`input relative flex items-center cursor-pointer h-11.5 p-3 tablet:w-56 ${isOnLogbook || isProjectPage ? 'laptop:w-80' : ''} ${!isProjectPage ? 'sm:w-48' : ''}`}
+          className={`input relative flex items-center cursor-pointer h-11.5 p-3 tablet:w-56 ${isOnLogbook || isProjectPage ? 'laptop:w-80' : ''} ${!isProjectPage ? 'sm:w-48' : 'sm:w-56'}`}
           onClick={openDateRange}
         >
           <p className="tablet:text-xs">{isValidDate(range?.endDate) ? dateLocaleRo(range?.endDate) : 'Alegeti o data'}</p>

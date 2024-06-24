@@ -31,7 +31,7 @@ const Page = ({ id }) => {
               <ProjectTitle projectId={id} setSelectedProject={setSelectedProject} />
               <div className="">
                 <Link href={`/admin/projects/${id}/stats`}>
-                  <button className="border-white border-solid border-1 text-white hover:text-primary hover:bg-white transition ease-in-out duration-150 rounded-full px-4 ml-2">
+                  <button className="border-white border-solid border-1 text-white hover:text-primary hover:bg-white transition ease-in-out duration-150 rounded-full px-4 mx-2">
                     <i className="fa-solid fa-chart-simple" />
                   </button>
                 </Link>
