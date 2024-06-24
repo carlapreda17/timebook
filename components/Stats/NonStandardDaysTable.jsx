@@ -17,10 +17,10 @@ const NonStandardDaysTable = ({ tableType, nonStandardDays, DATES_TYPES }) => {
     const type = isWeekendDay
       ? DATES_TYPES.WEEKEND_DAY
       : isBankHolidayDay
-      ? DATES_TYPES.BANK_HOLIDAY_DAY
-      : isVacationDay
-      ? DATES_TYPES.VACATION_DAY
-      : DATES_TYPES.WORKABLE_DAY;
+        ? DATES_TYPES.BANK_HOLIDAY_DAY
+        : isVacationDay
+          ? DATES_TYPES.VACATION_DAY
+          : DATES_TYPES.WORKABLE_DAY;
 
     const workableHours = isWeekendDay ? 0 : isBankHolidayDay ? 0 : isVacationDay ? 0 : 8;
 
@@ -49,13 +49,14 @@ const NonStandardDaysTable = ({ tableType, nonStandardDays, DATES_TYPES }) => {
   }, 0);
 
   return (
-    <div className="w-1/2">
+    <div>
       <div className="py-3 text-lg font-bold dark:text-white">
         {tableType === 'extra-time' ? 'Zile extra time' : 'Zile incomplete'}
       </div>
-      <table className="w-full ">
-        <NonStandardDaysTableHead totalDifference={totalDifference} />
-        <tbody>
+      <div className="table-wrapper">
+        <table className="table-container">
+          <NonStandardDaysTableHead totalDifference={totalDifference}/>
+          <tbody>
           {nonStandardDays
             .sort((a, b) => new Date(b.date) - new Date(a.date))
             .map((day, index) =>
@@ -69,8 +70,9 @@ const NonStandardDaysTable = ({ tableType, nonStandardDays, DATES_TYPES }) => {
                 tableType
               )
             )}
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
