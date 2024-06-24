@@ -9,7 +9,7 @@ const AreYouSureRomanian = ({ isOpen, hide, iAmSure, children }) => {
       </Modal.Header>
       <Modal.Body>{children}</Modal.Body>
       <Modal.Footer>
-        <div className="w-full grid grid-cols-2 gap-4 sm:flex justify-between">
+        <div className="w-full flex justify-between">
           <Button className="cancel" onClick={hide}>
             <span className="ml-2">Anulează</span>
           </Button>

@@ -62,12 +62,15 @@ button:disabled {
   @apply border-accent text-accent;
 }
 
-.cancel {
-  @apply px-5 py-1.5 bg-accent font-medium hover:bg-accentLight hover:border-accentLight border-2 border-accent text-white rounded-md !important;
+.back {
+  @apply px-5 py-1.5 bg-accent font-medium hover:bg-accentLight border-2 border-accent text-white rounded-md !important;
 }
 
+.cancel {
+  @apply border-blue-700 border-solid border font-medium text-white bg-blue-700 transition ease-in-out duration-150 p-1.5 rounded px-3 text-center
+}
 .confirm {
-  @apply px-5 py-1.5 bg-primary border-2 border-primary text-base hover:border-sky-800 hover:bg-sky-800 text-white rounded-md !important;
+  @apply px-5 py-1.5 bg-primary border-2 border-primary font-medium text-base hover:border-sky-800 hover:bg-sky-800 text-white rounded-md !important;
 }
 
 .delete {

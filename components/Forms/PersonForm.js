@@ -86,7 +86,7 @@ const PersonForm = ({ onSubmit,initialValues }) => {
         </div>
         <div className="flex flex-col sm:flex-row gap-4 sm:items-end justify-between">
           <Link href="/admin/technical-people">
-            <a className="cancel text-center">
+            <a className="back text-center">
               <i className="fas fa-arrow-left"></i>
               <span className="ml-2">înapoi la persoane</span>
             </a>

@@ -45,8 +45,8 @@ const AddUserVacationForm = ({ id, hideModal, refetch }) => {
           <Fieldset name="description" label="Descriere">
             <Field id="description" name="description" as={Textarea} rows={2} autoComplete="off" />
           </Fieldset>
-          <div className="flex items-end justify-end gap-4">
-            <button className="cancel" onClick={hideModal} type="button">
+          <div className="flex justify-end mobile:grid mobile:w-full gap-4">
+            <button className="px-5 py-2 bg-accent text-white rounded-md font-medium" onClick={hideModal} type="button">
               Anulează
             </button>
             <Submit className="confirm">Confirmă</Submit>
