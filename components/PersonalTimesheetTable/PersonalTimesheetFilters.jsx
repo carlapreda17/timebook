@@ -25,9 +25,9 @@ const PersonalTimesheetFilters = ({ setOptions, setSelectedProject }) => {
   };
 
   return (
-    <div className="flex gap-6">
+    <div className="flex laptop:grid gap-6 ">
       <ProjectFilter onChange={setProjectFilter} />
-      <DateRange className="flex gap-6" onChange={setRangeFilter} />
+      <DateRange className="flex gap-5 laptop:grid" onChange={setRangeFilter} isPersonalTimesheet={true}/>
     </div>
   );
 };

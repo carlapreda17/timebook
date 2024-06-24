@@ -43,7 +43,7 @@ const Page = ({ id }) => {
         </div>
         <div className="p-4">
           {selectedRows.length === 0 && (
-            <div className="flex justify-between items-end">
+            <div className="flex justify-between tablet:grid items-end">
               <PersonalTimesheetFilters
                 setOptions={setOptions}
                 setSelectedProject={setSelectedProject}

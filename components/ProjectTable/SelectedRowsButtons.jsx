@@ -13,7 +13,7 @@ const SelectedRowsButtons = ({ activities, refetch }) => {
 
   return (
     <>
-      <div className="flex justify-between gap-0 mb-2.5 w-full"></div>
+      <div className="flex m-tablet:grid justify-between gap-6 sm:mb-2.5 sm:w-full"></div>
     </>
   );
 };

@@ -27,7 +27,7 @@ const AddActivityButton = ({ onHideModal, id }) => {
               onClick={showModal}
             >
               <i className="fas fa-plus" />
-              <span className="add-button-text">Adaugă activitate!</span>
+              <span className="add-button-text">Adaugă activitate</span>
             </button>
           ) : (
             <DisabledAddActivityButton />

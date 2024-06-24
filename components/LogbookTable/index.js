@@ -13,7 +13,7 @@ import LogbookTableSuccess from './LogbookTableSuccess';
 import MessageNoRows from './MessageNoRows';
 import ProjectLink from './ProjectLink';
 import SelectedRowsArea from './SelectedRowsArea';
-import SelectedRowsButtons from './SelectedRowsButtons';
+import SelectedRowsButtons from '../../components/SelectedRowsButtons';
 import UserLink from './UserLink';
 import AdminCalendarButton from './AdminCalendarButton';
 

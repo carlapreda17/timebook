@@ -1,5 +1,5 @@
 import Plural from '../Plural';
-import SelectedRowsButtons from './SelectedRowsButtons';
+import SelectedRowsButtons from '../../components/SelectedRowsButtons';
 
 const SelectedRowsArea = ({ rows, ...props }) => {
   return (

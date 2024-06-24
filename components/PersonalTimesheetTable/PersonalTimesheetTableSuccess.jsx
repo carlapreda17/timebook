@@ -83,8 +83,8 @@ const PersonalTimesheetTableSuccess = ({ data, refetch, selectedRows, setSelecte
   };
 
   return (
-    <div className="flex flex-col w-full">
-      <table className="min-w-full">
+    <div className="table-wrapper">
+      <table className="table-container">
         <PersonalTimesheetTableHead toggleAll={toggleAll} checked={allRowsSelected} />
         <tbody>
           <tr className="border-b bg-primary">
@@ -102,9 +102,15 @@ const PersonalTimesheetTableSuccess = ({ data, refetch, selectedRows, setSelecte
             <td></td>
           </tr>
           {Object.keys(groupedData).map(renderDays)}
+          {!data?.length && (
+            <tr>
+              <td colSpan="7">
+                <MessageNoRows />
+              </td>
+            </tr>
+          )}
         </tbody>
       </table>
-      {!data?.length && <MessageNoRows />}
     </div>
   );
 };
