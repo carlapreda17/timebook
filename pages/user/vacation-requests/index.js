@@ -17,7 +17,7 @@ const Page = () => {
       <div className="bg-primary text-white rounded-t-xl w-full">
         <div className="flex flex-row items-center justify-between p-4">
           <div>
-            <h1 className="font-bold text-2xl mb-4 pt-4">Concedii</h1>
+            <h1 className="header-title">Concedii</h1>
             <UserVacationTotals data={data} />
           </div>
           <RequestVacationButton />

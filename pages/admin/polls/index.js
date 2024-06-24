@@ -33,7 +33,7 @@ const Page = () => {
         <div className="grid min-w-screen overflow-x-auto sm:overflow-x-visible">
           <div className="bg-primary text-white rounded-t-xl max-w-full flex flex-col w-full overflow-x-auto sm:overflow-x-visible">
             <div className="flex flex-row items-center justify-between p-4">
-              <h1 className="font-bold text-2xl mb-4">Sondaje</h1>
+              <h1 className="header-title">Sondaje</h1>
               <AddPollButton />
             </div>
             <div className="p-4 flex gap-6 flex-col lg:flex-row">

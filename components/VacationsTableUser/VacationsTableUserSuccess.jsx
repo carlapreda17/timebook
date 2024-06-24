@@ -55,7 +55,7 @@ const VacationsTableUserSuccess = ({ data, refetch }) => {
   };
 
   return (
-    <div className="flex w-screen md:w-full overflow-x-auto relative flex-col -mx-4 md:mx-0">
+    <div className="table-container">
       <table className="min-w-full tablet:mx-4">
         <VacationsTableUserHead />
         <tbody>{data.map(showVacations)}

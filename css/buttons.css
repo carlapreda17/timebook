@@ -77,3 +77,11 @@ button:disabled {
 .handle_project{
   @apply flex items-center p-2.5 text-white text-base gap-2 rounded-lg tablet:justify-center
 }
+
+.add-button{
+  @apply border-white border-solid border text-white hover:text-primary hover:bg-white transition ease-in-out duration-150 py-2 rounded px-4 !important;
+}
+
+.add-button-text{
+  @apply ml-2 hidden sm:inline !important;
+}

@@ -55,3 +55,7 @@
 .card-title {
   @apply pb-4 mb-4 border-b text-lg dark:text-white dark:border-b-slate-700 !important;
 }
+
+.header-title{
+  @apply font-bold text-2xl sm:mb-4 !important;
+}

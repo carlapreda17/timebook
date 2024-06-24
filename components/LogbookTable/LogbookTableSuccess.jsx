@@ -91,8 +91,8 @@ const LogbookTableSuccess = ({ data, refetch, selectedRows, setSelectedRows, tim
   };
 
   return (
-    <div className="flex w-screen md:w-full overflow-x-auto relative flex-col -mx-4 md:mx-0">
-      <table className="min-w-full tablet:mx-4">
+    <div className="table-wrapper">
+      <table className="table-container">
         <LogbookTableHead toggleAll={toggleAll} checked={allRowsSelected} />
         <tbody>
           <tr className="bg-primary">

@@ -4,11 +4,11 @@ const RequestVacationButton = () => {
   return (
     <Link href="/user/vacation-requests/request">
       <button
-        className="border-white border-solid border-1 text-white hover:text-primary hover:bg-white transition ease-in-out duration-150 py-2 rounded px-4"
+        className="add-button"
         type="button"
       >
         <i className="fas fa-plus" />
-        <span className="ml-2 hidden md:inline">Solicita concediu</span>
+        <span className="add-button-text">Solicită concediu</span>
       </button>
     </Link>
   );

@@ -20,8 +20,8 @@ const Page = () => {
   return (
     <Layout title="Timebook" role="admin">
       <div className="bg-primary text-white rounded-t-xl w-full">
-        <div className="flex flex-row items-center justify-between pr-4 py-4">
-          <h1 className="font-bold text-2xl mb-4 p-4">Concedii</h1>
+        <div className="flex flex-row items-center justify-between p-4">
+          <h1 className="header-title">Concedii</h1>
           <AddVacationButton />
         </div>
         <div className="p-4">

@@ -51,12 +51,20 @@ const UserVacationReportTableSuccess = ({ data, refetch }) => {
   };
 
   return (
-    <div className="flex w-screen md:w-full overflow-x-auto relative flex-col -mx-4 md:mx-0">
-      <table className="min-w-full">
+    <div className="table-wrapper">
+      <table className="table-container">
         <VacationsTableAdminUserHead />
-        <tbody>{data.map(showVacations)}</tbody>
+        <tbody>{data.map(showVacations)}
+        {!data?.length && (
+          <tr>
+            <td colSpan="7">
+              <MessageNoRows />
+            </td>
+          </tr>
+        )}
+        </tbody>
       </table>
-      {!data?.length && <MessageNoRows />}
+
     </div>
   );
 };

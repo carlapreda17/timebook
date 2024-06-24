@@ -19,7 +19,7 @@ const Page = () => {
     <Layout title="Proiecte" role="admin">
       <div className="bg-primary text-white rounded-t-xl">
         <div className="flex flex-row items-center justify-between p-4">
-          <h1 className="font-bold text-2xl mb-4">Proiecte</h1>
+          <h1 className="header-title">Proiecte</h1>
           <AddProjectButton onHideModal={refetch} />
         </div>
         <div className="p-4">

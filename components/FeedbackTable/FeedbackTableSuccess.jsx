@@ -30,8 +30,8 @@ const FeedbackTableSuccess = ({ data, refetch }) => {
   };
 
   return (
-    <div className="flex w-screen md:w-full overflow-x-auto relative flex-col -mx-4 md:mx-0">
-      <table className="w-min-full tablet:mx-4">
+    <div className="table-wrapper">
+      <table className="table-container">
         <FeedbackTableHead />
         <tbody>{data.map(showFeedback)}
         {!data?.length && (
