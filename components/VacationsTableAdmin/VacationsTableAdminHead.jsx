@@ -2,11 +2,11 @@ const VacationsTableAdminHead = () => {
   return (
     <thead>
       <tr className="border-b bg-primary">
-        <td className="p-3 text-gray-200 tablet:text-xs">Nume</td>
-        <td className="p-3 text-gray-200 tablet:text-xs">Data de inceput</td>
-        <td className="p-3 text-gray-200 tablet:text-xs">Data de sfarsit</td>
-        <td className="p-3 text-gray-200 tablet:text-xs">Mesaj</td>
-        <td className="p-3 text-gray-200 tablet:text-xs">Status</td>
+        <td className="table-head-text">Nume</td>
+        <td className="table-head-text">Data de inceput</td>
+        <td className="table-head-text">Data de sfarsit</td>
+        <td className="table-head-text">Mesaj</td>
+        <td className="table-head-text">Status</td>
       </tr>
     </thead>
   );
