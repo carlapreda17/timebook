@@ -3,7 +3,7 @@ import React from 'react';
 const MenuButton = () => {
   return (
     <div
-      className="sm:hidden text-primary rounded py-1 px-2 inline-block ml-2 bg-white dark:bg-slate-800"
+      className="lg:hidden text-primary rounded py-1 px-2 inline-block ml-2 bg-white dark:bg-slate-800"
       aria-label="Open menu"
     >
       <label
