@@ -12,23 +12,23 @@ const VacationsTableUserSuccess = ({ data, refetch }) => {
     if (type.startsWith('vacation')) {
       return (
         <tr key={data._id} className="table-row">
-          <td className="p-3 w-40">
+          <td className="p-3 w-40 tablet:text-xs">
             <VacationType type={type} />
           </td>
-          <td className="p-3 w-40">{dateLocaleRo(data.startDate) || '-'}</td>
-          <td className="p-3 w-40">{dateLocaleRo(data.endDate) || '-'}</td>
-          <td className="p-3 w-20">
+          <td className="p-3 w-40 tablet:text-xs">{dateLocaleRo(data.startDate) || '-'}</td>
+          <td className="p-3 w-40 tablet:text-xs">{dateLocaleRo(data.endDate) || '-'}</td>
+          <td className="p-3 w-20 tablet:text-xs">
             {!!data.amount && <Plural one="zi" many="zile" count={data.amount} />}
           </td>
-          <td className="p-3">
+          <td className="p-3 tablet:text-xs">
             {data.description !== undefined && (
               <Description description={data.description} limit={85} />
             )}
           </td>
-          <td className="p-3 w-20">
+          <td className="p-3 w-20 tablet:text-xs">
             <VacationStatus status={data.status} />
           </td>
-          <td className="p-3 w-20">
+          <td className="p-3 w-20 tablet:text-xs">
             {data.status === 'pending' && <DeleteRequestButton id={data._id} refetch={refetch} />}
           </td>
         </tr>
@@ -56,11 +56,18 @@ const VacationsTableUserSuccess = ({ data, refetch }) => {
 
   return (
     <div className="flex w-screen md:w-full overflow-x-auto relative flex-col -mx-4 md:mx-0">
-      <table className="min-w-full">
+      <table className="min-w-full tablet:mx-4">
         <VacationsTableUserHead />
-        <tbody>{data.map(showVacations)}</tbody>
+        <tbody>{data.map(showVacations)}
+        {!data?.length && (
+          <tr>
+            <td colSpan="7">
+              <MessageNoRows />
+            </td>
+          </tr>
+        )}
+        </tbody>
       </table>
-      {!data?.length && <MessageNoRows />}
     </div>
   );
 };

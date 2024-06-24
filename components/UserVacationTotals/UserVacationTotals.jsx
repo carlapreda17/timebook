@@ -19,8 +19,8 @@ const UserVacationTotals = ({ data, id }) => {
   return (
     <>
       <div className="text-lg">
-        <h5 className="font-bold mt-2">TOTAL zile CO disponibile:</h5>
-        <div className="flex space-x-1 items-center">
+        <h5 className="font-bold mt-2 tablet:text-sm">TOTAL zile CO disponibile:</h5>
+        <div className="flex space-x-1 items-center tablet:text-sm">
           <Plural one="zi" many="zile" count={available} />
           <span
             onClick={() =>

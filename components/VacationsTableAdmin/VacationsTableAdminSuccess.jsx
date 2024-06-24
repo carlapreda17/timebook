@@ -2,6 +2,7 @@ import { VacationsTableAdminHead, PersonLink, VacationStatusAdmin } from '.';
 import { dateLocaleRo } from '../../functions';
 import Description from '../Description';
 import { MessageNoRows } from '../LogbookTable';
+import React from "react";
 
 const VacationsTableAdminSuccess = ({ data, refetch }) => {
   const showVacations = (data) => {
@@ -12,12 +13,12 @@ const VacationsTableAdminSuccess = ({ data, refetch }) => {
         </td>
         <td className="p-3 min-w-40 tablet:text-xs">{dateLocaleRo(data.startDate)}</td>
         <td className="p-3 min-w-40 tablet:text-xs">{dateLocaleRo(data.endDate)}</td>
-        <td className="p-3 min-w-64 tablet:text-xs tablet:overflow-x-auto">
+        <td className="p-3 min-w-64 tablet:text-xs">
           {data.description !== undefined && (
             <Description description={data.description} limit={85} copyText={false} />
           )}
         </td>
-        <td className="p-3 w-20">
+        <td className="p-3 w-20 tablet:text-xs">
           <VacationStatusAdmin status={data.status} id={data._id} refetch={refetch} />
         </td>
       </tr>
@@ -25,12 +26,19 @@ const VacationsTableAdminSuccess = ({ data, refetch }) => {
   };
 
   return (
-    <div className="flex flex-col w-full tablet:overflow-x-auto">
-      <table className="w-min-full">
+    <div className="flex w-screen md:w-full overflow-x-auto relative flex-col -mx-4 md:mx-0">
+      <table className="w-min-full tablet:mx-4">
         <VacationsTableAdminHead />
-        <tbody>{data.map(showVacations)}</tbody>
+        <tbody>{data.map(showVacations)}
+        {!data?.length && (
+          <tr>
+            <td colSpan="7">
+              <MessageNoRows />
+            </td>
+          </tr>
+        )}
+        </tbody>
       </table>
-      {!data?.length && <MessageNoRows />}
     </div>
   );
 };

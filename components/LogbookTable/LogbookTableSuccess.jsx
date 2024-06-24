@@ -91,8 +91,8 @@ const LogbookTableSuccess = ({ data, refetch, selectedRows, setSelectedRows, tim
   };
 
   return (
-    <div className="flex flex-col w-full">
-      <table className="min-w-full">
+    <div className="flex w-screen md:w-full overflow-x-auto relative flex-col -mx-4 md:mx-0">
+      <table className="min-w-full tablet:mx-4">
         <LogbookTableHead toggleAll={toggleAll} checked={allRowsSelected} />
         <tbody>
           <tr className="bg-primary">
@@ -101,7 +101,7 @@ const LogbookTableSuccess = ({ data, refetch, selectedRows, setSelectedRows, tim
               <span className="text-white">{selectedRows.length > 0 ? "Total selectat:" : "Total:" } </span>
             </td>
             <td className="px-3 py-2 w-28">
-            
+
               <span className="font-bold text-white">
                 <FormatDuration  duration={selectedRows.length > 0 ? getTotalTimeWorked(data, selectedRows): timeData} />
               </span>
@@ -112,9 +112,15 @@ const LogbookTableSuccess = ({ data, refetch, selectedRows, setSelectedRows, tim
             <td></td>
           </tr>
           {Object.keys(groupedData).map(renderDays)}
+          {!data?.length && (
+            <tr>
+              <td colSpan="7">
+                <MessageNoRows />
+              </td>
+            </tr>
+          )}
         </tbody>
       </table>
-      {!data?.length && <MessageNoRows />}
     </div>
   );
 };
