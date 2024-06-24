@@ -9,6 +9,7 @@ import PollExpirePeriod from '../Fields/PollExpirePeriod';
 import SelectPriority from '../Fields/SelectPriority';
 import { Submit } from '../Formik';
 import PollAnonymity from '../Fields/PollAnonymity';
+import PollsForm from "./PollForm";
 
 const AddPollForm = () => {
   const router = useRouter();
@@ -25,31 +26,11 @@ const AddPollForm = () => {
   };
 
   return (
-    <Formik
-      validationSchema={validationSchema}
+    <PollsForm
       initialValues={initialValues}
+      validationSchema={validationSchema}
       onSubmit={handleSubmit}
-    >
-      <Form className="w-fit">
-        <div className="flex flex-col tablet:items-center gap-2 md:flex-row">
-          <div className="card tablet:w-full max-w-md flex flex-col gap-4 h-fit">
-            <PollTitle />
-            <PollDescription />
-            <PollQuestion />
-            <SelectPriority />
-            <PollExpirePeriod />
-            <PollAnonymity />
-            <Submit className="hidden md:block w-full h-fit max-w-md text-base px-6">
-              Adaugă
-            </Submit>
-          </div>
-            <AddOptionField />
-        </div>
-        <div className="w-full">
-          <Submit className="block mt-4 md:hidden w-full h-fit max-w-md text-base px-6">Adaugă</Submit>
-        </div>
-      </Form>
-    </Formik>
+    />
   );
 };
 
