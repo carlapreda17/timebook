@@ -122,6 +122,12 @@
   @apply min-w-max dark:bg-slate-900 dark:border-slate-700 pr-4 !important;
 }
 
+@media (max-width: 640px) {
+  .rdrDefinedRangesWrapper {
+    @apply h-[12.5] overflow-y-auto !important;
+  }
+}
+
 .rdrDateDisplayWrapper {
   @apply dark:bg-slate-900 !important;
 }

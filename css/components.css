@@ -18,3 +18,9 @@
 .rdrMonth {
   min-height: 320px;
 }
+
+@media (max-width: 380px) {
+  .rdrMonth {
+    width:300px;
+  }
+}

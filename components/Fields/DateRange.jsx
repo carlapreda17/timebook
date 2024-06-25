@@ -81,7 +81,7 @@ const DateRange = ({ onChange,isOnLogbook=false ,isProjectPage=false,isPersonalT
         </div>
       </div>
       <Modal
-        className="flex items-center"
+        className="flex items-center tablet:h-screen tablet:overflow-y-auto tablet:justify-center custom-modal"
         size="lg"
         dialogClassName="w-full mx-3 sm:mx-auto lg:w-5/12"
         centered
