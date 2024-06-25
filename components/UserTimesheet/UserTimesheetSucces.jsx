@@ -85,8 +85,8 @@ const UserTimesheetSucces = ({ data, refetch, selectedRows, setSelectedRows }) =
   };
 
   return (
-    <div className="flex w-screen md:w-full relative flex-col -mx-4 md:mx-0 overlow-y-visible">
-      <table className="w-full">
+    <div className="table-wrapper">
+      <table className="table-container">
         <UserTimesheetHead toggleAll={toggleAll} checked={allRowsSelected} />
         <tbody>{Object.keys(groupedData).map(renderDays)}</tbody>
       </table>

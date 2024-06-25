@@ -65,7 +65,7 @@ const AddActivityToCalendarDayForm = ({ hide, date, refetch, role, userId }) => 
               <div className="w-40 mt-6">Continuă să adaugi</div>
             </Checkbox>
             <div className="flex sm:items-end flex-col sm:flex-row gap-3 font-medium">
-              <button className="cancel" onClick={hide} type="reset">
+              <button className="back" onClick={hide} type="reset">
                 Anulează
               </button>
               <Submit className="confirm grow">Confirmă</Submit>

@@ -69,8 +69,8 @@ const AddUserTimeSheetEntry = ({ hideModal, id, refetch }) => {
             >
               <div className="dark:text-white">Continuă să adaugi</div>
             </Checkbox>
-            <div className="flex sm:items-end flex-col sm:flex-row sm:gap-3 font-medium">
-              <button className="cancel" onClick={hideModal} type="button">
+            <div className="flex sm:items-end flex-col sm:flex-row gap-3 font-medium">
+              <button className="back" onClick={hideModal} type="button">
                 Anulează
               </button>
               <Submit className="confirm grow">Confirmă</Submit>
