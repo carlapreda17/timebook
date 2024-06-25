@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Layout, LoadMore, withRouter } from '../../../../components';
 import PersonName from '../../../../components/PersonName';
 import { useInfiniteQuery } from '../../../../hooks';
-import AddActivityButton from '../../../../components/PersonalTimesheetTable/AddActivityButton';
+import AddActivityButton from '../../../../components/AddActivityButton';
 import PersonalTimesheetFilters from '../../../../components/PersonalTimesheetTable/PersonalTimesheetFilters';
 import SelectedRowsArea from '../../../../components/PersonalTimesheetTable/SelectedRowsArea';
 import PersonalTimesheetTableSuccess from '../../../../components/PersonalTimesheetTable/PersonalTimesheetTableSuccess';
@@ -39,7 +39,7 @@ const Page = ({ id }) => {
               <SeePersonStatsButton id={id} />
             </div>
           )}
-          <AddActivityButton id={id} onHideModal={refetch} />
+          <AddActivityButton userId={id}  onHideModal={refetch} />
         </div>
         <div className="p-4">
           {selectedRows.length === 0 && (

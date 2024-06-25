@@ -24,7 +24,7 @@ const UserVacationReportTableFilters = ({ setOptions }) => {
   };
 
   return (
-    <div className="flex gap-4 mt-4">
+    <div className="flex laptop:grid mt-2 gap-6">
       <TypeFilter onChange={setTypeFilter} />
       <ShowRejectedFilter onChange={showRejectedFilter} />
     </div>

@@ -10,7 +10,7 @@ import { toaster } from '../../lib';
 import { useState } from 'react';
 import InvisibleProjectID from "../Activities/InvisibleProjectID";
 
-const AddActivityForm = ({ hideModal, projectId }) => {
+const AddActivityForm = ({ hideModal, projectId,userId }) => {
   const handleSubmit = async (values, resetForm, setFieldValue) => {
     try {
       await createActivity(values);
@@ -21,6 +21,8 @@ const AddActivityForm = ({ hideModal, projectId }) => {
         setFieldValue('date', date);
         if(projectId)
           setFieldValue('project', projectId);
+        if(userId)
+          setFieldValue('user', userId);
       } else if (typeof hideModal === 'function') {
         hideModal();
       }
@@ -53,7 +55,7 @@ const AddActivityForm = ({ hideModal, projectId }) => {
               <ActivityDuration />
             </div>
           </div>
-          <SelectPerson />
+          {!userId && <SelectPerson/>}
           {!projectId && <SelectProject />}
           <Fieldset name="description" label="Descriere">
             <Field
