@@ -104,7 +104,6 @@ const PollsCardFooter = ({
                   'Sondajul nu a putut fi aprobat.'
                 )
               }
-              green={true}
             >
               Esti sigur ca aprobi acest sondaj?
             </ConfirmModal>

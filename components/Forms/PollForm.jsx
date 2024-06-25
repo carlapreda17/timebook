@@ -10,18 +10,6 @@ import Button from "../Button";
 
 const PollsForm = ({ initialValues, validationSchema, onSubmit, isEdit = false, data }) => {
   const router = useRouter();
-
-  const handleSubmit = async (values) => {
-    try {
-      await onSubmit(values);
-      toaster.success(`Sondajul a fost ${isEdit ? 'editat' : 'adaugat'}`);
-      router.push(`/${data?.role || ''}/polls${isEdit ? `/${data?.id || ''}` : ''}`);
-    } catch (e) {
-      toaster.error(`Sondajul nu a putut fi ${isEdit ? 'editat' : 'adaugat'}`);
-      console.error(e);
-    }
-  };
-
   const translatePriorityOptionToRomanian = (priorityOption) => {
     switch (priorityOption) {
       case 'low':
@@ -44,7 +32,7 @@ const PollsForm = ({ initialValues, validationSchema, onSubmit, isEdit = false, 
     <Formik
       validationSchema={validationSchema}
       initialValues={initialValues}
-      onSubmit={handleSubmit}
+      onSubmit={onSubmit}
     >
       <Form className="w-fit">
         <div className="flex flex-col tablet:items-center gap-2 md:flex-row">
@@ -79,6 +67,7 @@ const PollsForm = ({ initialValues, validationSchema, onSubmit, isEdit = false, 
                         autoComplete="off"
                         type="text"
                         className="w-full"
+                        disabled
                       />
                       <Button
                         type="button"
