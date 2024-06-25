@@ -124,8 +124,8 @@ const ChartStats = ({ data, from, to }) => {
 
   return (
     <section className="w-full flex-col gap-2 mt-5">
-      <div className="flex gap-2 w-full mb-4 tablet:grid">
-        <div className="w-1/3 bg-white rounded-lg shadow-lg p-4 tablet:w-3/4">
+      <div className="flex gap-2 w-full mb-4 laptop:grid">
+        <div className="w-1/3 bg-white rounded-lg shadow-lg p-4 tablet:w-9/12 mobile:w-[98%] m-tablet:w-1/2">
           <PieChartHours
             label="Ore lucrate dupa proiect"
             labels={data.totalHoursWorked.perProject.map((project) => project.name)}
@@ -134,13 +134,15 @@ const ChartStats = ({ data, from, to }) => {
           />
         </div>
         {labels.length > 1 && labels.length <= 31 && (
-          <div className="w-2/3 h-full bg-white rounded-lg shadow-lg p-4 tablet:w-3/4">
-            <LineChart
-              label="Ore lucrate pe zile"
-              labels={labels}
-              data={lineChartData}
-              options={options}
-            />
+          <div className="flex w-2/3 tablet:w-full overflow-x-auto relative flex-col md:mx-0 rounded-lg bg-white">
+            <div className="tablet:mx-4 tablet:w-screen">
+              <LineChart
+                label="Ore lucrate pe zile"
+                labels={labels}
+                data={lineChartData}
+                options={options}
+              />
+            </div>
           </div>
         )}
       </div>
