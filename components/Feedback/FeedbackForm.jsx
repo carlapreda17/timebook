@@ -45,8 +45,7 @@ const FeedbackForm = ({ hideModal }) => {
           <TypeSelect />
           <TitleInput />
           <FeedbackDescription />
-          <div className="flex justify-between m-tablet:flex-col">
-           <div className="m-tablet:mb-3">
+          <div className="flex sm:items-center justify-between flex-col sm:flex-row gap-4 sm:justify-between">
              <Checkbox
                onChange={() => {
                  setCheckbox(!checkbox);
@@ -55,12 +54,11 @@ const FeedbackForm = ({ hideModal }) => {
              >
                <div className="w-40 mt-6 dark:text-white">Continuă să adaugi</div>
              </Checkbox>
-           </div>
-            <div className="flex sm:items-end flex-row gap-3 font-medium">
-              <button className="cancel" onClick={hideModal} type="button">
+            <div className="flex sm:items-end flex-col sm:flex-row gap-3 font-medium">
+              <button className="back" onClick={hideModal} type="button">
                 Anulează
               </button>
-              <Submit className="confirm">Confirmă</Submit>
+              <Submit className="confirm grow">Confirmă</Submit>
             </div>
           </div>
           <InvisibleUserID id={me.me} />
