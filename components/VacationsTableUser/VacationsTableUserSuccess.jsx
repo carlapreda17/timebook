@@ -55,8 +55,8 @@ const VacationsTableUserSuccess = ({ data, refetch }) => {
   };
 
   return (
-    <div className="table-container">
-      <table className="min-w-full tablet:mx-4">
+    <div className="table-wrapper">
+      <table className="table-container">
         <VacationsTableUserHead />
         <tbody>{data.map(showVacations)}
         {!data?.length && (
