@@ -28,16 +28,16 @@ const PersonRowActions = ({ person, refetch }) => {
   return (
     <div className="flex justify-around">
       <button onClick={handleView}>
-        <Tooltip icon="fa-solid fa-eye text-blue-500 text-lg tablet:text-xs">Vizualizeaza</Tooltip>
+        <Tooltip icon="fa-solid fa-eye text-blue-500 text-lg tablet:text-sm">Vizualizeaza</Tooltip>
       </button>
       {active && (
         <button onClick={openDeleteModal}>
-          <Tooltip icon="fa-solid fa-trash text-red-700 text-lg tablet:text-xs">Șterge</Tooltip>
+          <Tooltip icon="fa-solid fa-trash text-red-700 text-lg tablet:text-sm">Șterge</Tooltip>
         </button>
       )}
       {!active && (
         <button onClick={openActivateModal}>
-          <Tooltip icon="fa-solid fa-circle-up text-green-700 text-lg tablet:text-xs">Activeaza</Tooltip>
+          <Tooltip icon="fa-solid fa-circle-up text-green-700 text-lg tablet:text-sm">Activeaza</Tooltip>
         </button>
       )}
       <PersonRowModals modal={modal} hideModal={hideModal} id={_id} />

@@ -35,13 +35,13 @@ const DeleteManyActivities = ({ show, hide, activities, onComplete }) => {
       <Modal.Footer>
         <div className="w-full flex justify-between">
           <Button
-            className="text-accent border-accent border-solid border-1 hover:text-white hover:bg-accent transition ease-in-out duration-150 p-1.5 rounded px-3 text-center"
+            className="back"
             onClick={hide}
           >
             <span className="">Anulează</span>
           </Button>
           <Button
-            className="text-primary border-primary border-solid border-1 hover:text-white hover:bg-primary transition ease-in-out duration-150 p-1.5 rounded px-3 text-center"
+            className="confirm"
             onClick={handleClick}
           >
             <span className="">Confirma</span>
