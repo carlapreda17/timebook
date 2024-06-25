@@ -3,7 +3,7 @@
 }
 
 .datepicker .react-calendar {
-  @apply w-full border dark:border-slate-600 rounded dark:bg-slate-900 pt-4 !important;
+  @apply w-full border dark:border-slate-600 rounded dark:bg-slate-900 py-4 !important;
 }
 
 .react-calendar--doubleView {

@@ -125,7 +125,7 @@ const ChartStats = ({ data, from, to }) => {
   return (
     <section className="w-full flex-col gap-2 mt-5">
       <div className="flex gap-2 w-full mb-4 laptop:grid">
-        <div className="w-1/3 bg-white rounded-lg shadow-lg p-4 tablet:w-9/12 mobile:w-[98%] m-tablet:w-1/2">
+        <div className="w-1/3 bg-white rounded-lg shadow-lg p-4 tablet:w-9/12 mobile:w-[99%] m-tablet:w-1/2">
           <PieChartHours
             label="Ore lucrate dupa proiect"
             labels={data.totalHoursWorked.perProject.map((project) => project.name)}

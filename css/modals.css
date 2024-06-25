@@ -10,12 +10,3 @@
   @apply dark:text-white !important;
 }
 
-/*@media (max-width: 640px) {*/
-/*  .modal-content {*/
-/*    @apply overflow-y-auto h-screen !important;*/
-/*  }*/
-/*}*/
-
-.custom-modal{
-  @apply h-screen overflow-y-auto !important;
-}

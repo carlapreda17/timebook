@@ -81,14 +81,16 @@ const DateRange = ({ onChange,isOnLogbook=false ,isProjectPage=false,isPersonalT
         </div>
       </div>
       <Modal
-        className="flex items-center tablet:h-screen tablet:overflow-y-auto tablet:justify-center custom-modal"
+        className="flex items-center tablet:overflow-y-auto tablet:justify-center"
         size="lg"
+        fullscreen="md-down"
         dialogClassName="w-full mx-3 sm:mx-auto lg:w-5/12"
         centered
         show={showDateRange}
         onHide={hideDateRange}
       >
-        <h2 className="py-6 px-6 text-2xl laptop:text-lg tablet:text-base font-semibold dark:text-white">
+        <h2
+          className="py-6 px-6 text-2xl laptop:text-lg tablet:text-base font-semibold dark:text-white">
           Alegeți intervalul de timp
         </h2>
         {/* For resolutions > 640px */}
@@ -188,9 +190,8 @@ const DateRange = ({ onChange,isOnLogbook=false ,isProjectPage=false,isPersonalT
           rangeColors={['#53B0AE']}
           className="pl-4 pr-6 h-full tablet:hidden flex"
         />
-        {/* For resolutions < 640px */}
-          <DateRangeMobile handleChange={handleChange} range={range}/>
-        <div className="flex mx-6 my-6 gap-4 justify-between flex-col lg:flex-row ">
+        <div
+          className="flex mx-6 my-6 gap-4 justify-between tablet:bg-slate-900 tablet:w-1/2 flex-col lg:flex-row ">
           <div className="flex gap-4 flex-col lg:flex-row">
             <button className="cancel" onClick={hideDateRange}>
               Anulează
@@ -203,6 +204,8 @@ const DateRange = ({ onChange,isOnLogbook=false ,isProjectPage=false,isPersonalT
             Alege
           </button>
         </div>
+        {/* For resolutions < 640px */}
+        <DateRangeMobile handleChange={handleChange} range={range}/>
       </Modal>
     </div>
   );
