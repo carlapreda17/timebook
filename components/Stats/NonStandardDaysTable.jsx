@@ -26,14 +26,14 @@ const NonStandardDaysTable = ({ tableType, nonStandardDays, DATES_TYPES }) => {
 
     return (
       <tr className="table-row" key={index}>
-        <td className="p-3 w-80 flex">
+        <td className="p-3 w-80 flex tablet:w-40">
           {formatedDate.toLocaleString('ro-RO').substring(0, 10)}
           <Tooltip>
             {type}: {workableHours} ore
           </Tooltip>
         </td>
         <td
-          className={`p-3 w-12 text-${
+          className={`p-3 w-12 tablet:w-20 text-${
             tableType === 'extra-time' ? 'green' : 'red'
           }-600 font-semibold`}
         >
@@ -49,12 +49,12 @@ const NonStandardDaysTable = ({ tableType, nonStandardDays, DATES_TYPES }) => {
   }, 0);
 
   return (
-    <div>
+    <div className="tablet:w-full">
       <div className="py-3 text-lg font-bold dark:text-white">
         {tableType === 'extra-time' ? 'Zile extra time' : 'Zile incomplete'}
       </div>
-      <div className="table-wrapper">
-        <table className="table-container">
+      <div className="flex flex-col w-full">
+        <table className="min-w-full">
           <NonStandardDaysTableHead totalDifference={totalDifference}/>
           <tbody>
           {nonStandardDays
