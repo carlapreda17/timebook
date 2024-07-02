@@ -2,7 +2,7 @@ const NonStandardDaysTableHead = ({ totalDifference }) => {
   return (
     <thead>
       <tr className="border-b bg-primary text-white">
-        <td className="p-3 w-80">Data</td>
+        <td className="p-3 sm:w-80 w-[9rem]">Data</td>
         <td className="p-3 w-15">Diferenta</td>
       </tr>
       <tr className="border-b bg-primary">
