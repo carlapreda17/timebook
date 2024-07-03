@@ -33,7 +33,7 @@ const CalendarHeader = ({
         </div>
         <CalendarHeaderButtons role={role} refetch={refetch} />
       </div>
-      <div className="flex flex-col md:flex-row justify-between gap-6">
+      <div className="flex flex-col md:flex-row justify-between gap-2 sm:gap-4">
         <CalendarHeaderFilters
           setOptions={setOptions}
           setShowWeekend={setShowWeekend}

@@ -59,3 +59,8 @@
 .header-title{
   @apply font-bold text-2xl sm:mb-4 !important;
 }
+
+.filters-container{
+  @apply flex gap-6 laptop:grid laptop:gap-5 !important;
+}
+

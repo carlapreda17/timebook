@@ -27,9 +27,9 @@ const ProjectFilters = ({ setOptions, setSelectedPerson }) => {
   };
 
   return (
-    <div className="flex laptop:grid gap-6 laptop:gap-5">
+    <div className="filters-container">
       <UserFilter onChange={setUserFilter} isProjectPage={true}></UserFilter>
-      <DateRange className="flex gap-5 laptop:grid" onChange={setRangeFilter} isProjectPage={true} />
+      <DateRange className="filters-container" onChange={setRangeFilter} isProjectPage={true} />
     </div>
   );
 };

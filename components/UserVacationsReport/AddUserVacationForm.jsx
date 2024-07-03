@@ -34,7 +34,7 @@ const AddUserVacationForm = ({ id, hideModal, refetch }) => {
       >
         <Form className="flex flex-col space-y-4">
           <div className="grid sm:grid-cols-3 gap-4">
-            <div className="col-span-2">
+            <div className="sm:col-span-2">
               <SelectPerson disabled />
             </div>
             <Fieldset name="amount" label="Numărul de zile">
@@ -45,11 +45,11 @@ const AddUserVacationForm = ({ id, hideModal, refetch }) => {
           <Fieldset name="description" label="Descriere">
             <Field id="description" name="description" as={Textarea} rows={2} autoComplete="off" />
           </Fieldset>
-          <div className="flex justify-end mobile:grid mobile:w-full gap-4">
+          <div className="buttons-container">
             <button className="px-5 py-2 bg-accent text-white rounded-md font-medium" onClick={hideModal} type="button">
               Anulează
             </button>
-            <Submit className="confirm">Confirmă</Submit>
+            <Submit className="confirm grow">Confirmă</Submit>
           </div>
           <InvisibleUserID id={id} />
         </Form>

@@ -37,10 +37,10 @@ const LogbookFilters = ({ setOptions, setSelectedPerson, setSelectedProject }) =
   };
 
   return (
-    <div className="flex laptop:grid gap-6 ">
+    <div className="filters-container">
       <ProjectFilter onChange={setProjectFilter}></ProjectFilter>
       <UserFilter onChange={setUserFilter} isOnLogbook={true}></UserFilter>
-      <DateRange className="flex gap-5 laptop:grid" isOnLogbook={true} onChange={setRangeFilter} />
+      <DateRange className="filters-container" isOnLogbook={true} onChange={setRangeFilter} />
     </div>
   );
 };

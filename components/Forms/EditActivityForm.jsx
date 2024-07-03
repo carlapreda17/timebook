@@ -59,7 +59,7 @@ const EditActivityForm = ({ hideModal, id }) => {
                   autoComplete="off"
                 />
               </Fieldset>
-              <div className="flex flex-col justify-between pt-8 sm:flex-row gap-4 sm:justify-between mt-6">
+              <div className="buttons-container">
                 <button
                   type="button"
                   className="px-5 py-2 bg-accent text-white rounded-md mt-4"
@@ -68,7 +68,7 @@ const EditActivityForm = ({ hideModal, id }) => {
                   <i className="fa-solid fa-arrow-left" />
                   <span className="ml-2">Anulează</span>
                 </button>
-                <Submit className="button full primary mt-4 px-5 py-2 bg-primary text-white rounded-md">
+                <Submit className="button grow full primary mt-4 px-5 py-2 bg-primary text-white rounded-md">
                   <i className="fa-solid fa-check" />
                   <span className="ml-2">Confirmă</span>
                 </Submit>

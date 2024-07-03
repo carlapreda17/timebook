@@ -32,7 +32,7 @@ const PersonForm = ({ onSubmit,initialValues }) => {
           </div>
         </div>
         <div className="flex flex-col sm:flex-row">
-          <div className="w-1/2 mobile:mt-4 mr-6 mobile:w-full">
+          <div className="w-1/2 mr-6 mobile:w-full">
             <Birthday />
           </div>
           <div className="w-1/2 tablet:mt-4 mobile:w-full">
@@ -45,7 +45,7 @@ const PersonForm = ({ onSubmit,initialValues }) => {
           <Field id="email" name="email" as={Email} autoComplete="new-email" />
         </Fieldset>
         <div className="flex flex-row mobile:flex-col">
-          <div className="w-1/2 mr-6 mobile:mt-4 mobile:w-full">
+          <div className="w-1/2 mr-6 mobile:w-full">
             <Fieldset name="password" label="Parola">
               <div className="mb-1" />
               <div className="relative">

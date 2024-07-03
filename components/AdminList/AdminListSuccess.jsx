@@ -8,7 +8,7 @@ const AdminListSuccess = ({ data }) => {
       <table className={classnames('border-collapse rounded-lg shadow-md overflow-x-auto')}>
         <thead className="table-head">
           <tr>
-            <td className="p-4 text-sm px-2 sm:px-8 w-full">Nume</td>
+            <td className="p-4 text-sm px-4 sm:px-8 w-full">Nume</td>
             <td className="p-4 text-sm px-2 sm:px-4 w-full">E-mail</td>
           </tr>
         </thead>

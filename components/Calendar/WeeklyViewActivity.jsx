@@ -26,7 +26,7 @@ const WeeklyViewActivity = ({ activity, role, showWeekend }) => {
       <span className="line-clamp-2 text-ellipsis whitespace-normal text-left mb-1 italic">
         {activity.description}
       </span>
-      <div className={classnames('flex', showWeekend === true && 'flex-col')}>
+      <div className={classnames('flex justify-between', showWeekend === true && 'flex-col')}>
         <span className="w-8/12 text-left">{dateLocaleRo(activity.date)}</span>
         {role === 'admin' && (
           <span className={showWeekend && 'text-left'}>
