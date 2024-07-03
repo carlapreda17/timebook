@@ -65,25 +65,25 @@ const LogbookTableSuccess = ({ data, refetch, selectedRows, setSelectedRows, tim
           <Checkbox
             onChange={() => toggleRow(activity._id)}
             checked={isSelected}
-            className={'form-checkbox p-2 cursor-pointer checked:bg-primary ring-primary'}
+            className={'form-checkbox sm:p-2 cursor-pointer checked:bg-primary ring-primary'}
           />
         </td>
-        <td className="p-3 w-40">
+        <td className="p-3 w-40 tablet:w-20 tablet:text-xs">
           <ActivityDate date={activity.date} />
         </td>
-        <td className="px-3 py-2 w-28">
-          <FormatDuration duration={activity.duration} />
+        <td className="px-3 py-2 w-28 tablet:text-xs">
+          <FormatDuration duration={activity.duration} smallText={true}/>
         </td>
-        <td className="p-3 w-64">
+        <td className="p-3 w-64 tablet:text-xs">
           <ProjectLink {...activity.project} />
         </td>
-        <td className="p-3 w-64">
+        <td className="p-3 w-64 tablet:text-xs">
           <UserLink {...activity.user} />
         </td>
-        <td className="p-3">
+        <td className="p-3 tablet:text-xs">
           <Description description={activity.description} limit={40} />
         </td>
-        <td className="p-3 w-20">
+        <td className="p-3 w-20 tablet:text-xs">
           <LogbookRowActions activity={activity} refetch={refetch} />
         </td>
       </tr>
@@ -97,13 +97,13 @@ const LogbookTableSuccess = ({ data, refetch, selectedRows, setSelectedRows, tim
         <tbody>
           <tr className="bg-primary">
             <td></td>
-            <td className="p-3 w-40 flex flex-col">
+            <td className="p-3 w-40 tablet:w-20 flex flex-col tablet:text-xs">
               <span className="text-white">{selectedRows.length > 0 ? "Total selectat:" : "Total:" } </span>
             </td>
             <td className="px-3 py-2 w-28">
 
               <span className="font-bold text-white">
-                <FormatDuration  duration={selectedRows.length > 0 ? getTotalTimeWorked(data, selectedRows): timeData} />
+                <FormatDuration  duration={selectedRows.length > 0 ? getTotalTimeWorked(data, selectedRows): timeData} smallText={true} />
               </span>
             </td>
             <td></td>

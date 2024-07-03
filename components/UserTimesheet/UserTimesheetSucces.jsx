@@ -61,23 +61,23 @@ const UserTimesheetSucces = ({ data, refetch, selectedRows, setSelectedRows }) =
           <Checkbox
             onChange={() => toggleRow(activity._id)}
             checked={isSelected}
-            className={'form-checkbox p-2 cursor-pointer checked:bg-primary ring-primary'}
+            className={'form-checkbox sm:p-2 cursor-pointer checked:bg-primary ring-primary'}
           />
         </td>
-        <td className="p-3 w-40">
+        <td className="p-3 w-40 tablet:text-xs">
           <ActivityDate date={activity.date} />
         </td>
-        <td className="px-3 py-2 w-28">
+        <td className="px-3 py-2 w-28 tablet:text-xs">
           <FormatDuration duration={activity.duration} />
         </td>
-        <td className="p-3 w-64">
+        <td className="p-3 w-64 tablet:text-xs">
           <a className="w-full line-clamp-1">{truncate(activity.project.name, 35)}</a>
         </td>
-        <td className="p-3">
+        <td className="p-3 tablet:text-xs">
           <Description description={activity.description} limit={95} />
         </td>
 
-        <td className="p-3 w-20 h-14">
+        <td className="p-3 w-20 h-14 tablet:text-xs">
           <UserTimesheetRowActions activity={activity} refetch={refetch} />
         </td>
       </tr>

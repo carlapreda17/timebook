@@ -45,23 +45,23 @@ const FeedbackForm = ({ hideModal }) => {
           <TypeSelect />
           <TitleInput />
           <FeedbackDescription />
-          <div className="flex sm:items-center justify-between flex-col sm:flex-row gap-4 sm:justify-between">
+          <div className="flex flex-col sm:flex-row justify-between mt-4">
              <Checkbox
                onChange={() => {
                  setCheckbox(!checkbox);
                }}
-               className="form-checkbox rounded mt-6"
+               className="form-checkbox rounded"
              >
-               <div className="w-40 mt-6 dark:text-white">Continuă să adaugi</div>
+               <div className="w-40 dark:text-white">Continuă să adaugi</div>
              </Checkbox>
-            <div className="flex sm:items-end flex-col sm:flex-row gap-3 font-medium">
+            <div className="flex gap-4 tablet:mt-2 mobile:flex-col">
               <button className="back" onClick={hideModal} type="button">
                 Anulează
               </button>
               <Submit className="confirm grow">Confirmă</Submit>
             </div>
           </div>
-          <InvisibleUserID id={me.me} />
+          <InvisibleUserID id={me.me}/>
         </Form>
       </Formik>
     </div>

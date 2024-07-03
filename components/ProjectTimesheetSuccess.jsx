@@ -84,7 +84,7 @@ const ProjectTimesheetSuccess = ({ data, project, refetch }) => {
                       checked={selectedRows.includes(activity._id) && 'checked'}
                     />
                   </td>
-                  <td className="p-3 w-40">{dateLocaleRo(activity.date)}</td>
+                  <td className="p-3 w-40 tablet:text-xs">{dateLocaleRo(activity.date)}</td>
                   <td className="p-3 w-28">
                     <FormatDuration duration={activity.duration} />
                   </td>

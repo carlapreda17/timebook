@@ -61,19 +61,19 @@ const ProjectTimesheetSuccess = ({ data, refetch, selectedRows, setSelectedRows 
           <Checkbox
             onChange={() => toggleRow(activity._id)}
             checked={isSelected}
-            className={'form-checkbox p-2 cursor-pointer checked:bg-primary ring-primary'}
+            className={'form-checkbox sm:p-2 cursor-pointer checked:bg-primary ring-primary'}
           />
         </td>
-        <td className="p-3 w-40">
+        <td className="p-3 w-40 tablet:text-xs">
           <ActivityDate date={activity.date} />
         </td>
         <td className="px-3 py-2 w-28">
           <FormatDuration duration={activity.duration} />
         </td>
-        <td className="p-3 w-64">
+        <td className="p-3 w-64 tablet:text-xs">
           <UserLink {...activity.user} />
         </td>
-        <td className="p-3">
+        <td className="p-3 tablet:text-xs">
           <Description description={activity.description} limit={110} />
         </td>
       </tr>
@@ -88,12 +88,12 @@ const ProjectTimesheetSuccess = ({ data, refetch, selectedRows, setSelectedRows 
           <tr className="bg-primary w-full">
             <td></td>
 
-            <td className="p-3 w-40">
+            <td className="p-3 w-40 tablet:text-xs">
               <span className="text-white">Total selectat:</span>{' '}
             </td>
-            <td className="px-3 py-2 w-28">
+            <td className="px-3 py-2 w-28 tablet:text-xs">
               <span className="font-bold text-white">
-                <FormatDuration duration={getTotalTimeWorked(data, selectedRows)} />
+                <FormatDuration duration={getTotalTimeWorked(data, selectedRows)} smallText={true} />
               </span>
             </td>
             <td></td>

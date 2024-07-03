@@ -22,9 +22,9 @@ const UserTimesheetFilters = ({ setOptions }) => {
   };
 
   return (
-    <div className="flex gap-6 flex-col md:flex-row">
+    <div className="filters-container">
       <ProjectFilter onChange={setProjectFilter}></ProjectFilter>
-      <DateRange className="flex gap-5 flex-col md:flex-row" onChange={setRangeFilter} />
+      <DateRange className="filters-container" onChange={setRangeFilter} isPersonalTimesheet={true}/>
     </div>
   );
 };

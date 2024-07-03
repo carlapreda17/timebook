@@ -16,7 +16,7 @@ const PollsUserFilter = ({ setOptions }) => {
   };
 
   return (
-    <div>
+    <div className="laptop:w-80 tablet:w-56">
       <label className="font-semibold mb-2">{'Sortare dupa persoana'}</label>
       <select className="select" onChange={(e) => setUserFilter(e.target.value)} defaultValue={''}>
         <option value="">Toate persoanele</option>

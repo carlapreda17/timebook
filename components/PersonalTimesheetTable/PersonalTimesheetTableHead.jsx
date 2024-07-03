@@ -14,11 +14,11 @@ const PersonalTimesheetTableHead = ({ checked, toggleAll }) => {
             }
           />
         </th>
-        <th className="p-3 text-gray-200">Data</th>
-        <th className="p-3 text-gray-200">Durata</th>
-        <th className="p-3 text-gray-200">Proiect</th>
-        <th className="p-3 text-gray-200">Descriere</th>
-        <th className="p-3 text-gray-200 text-center">Actiuni</th>
+        <th className="table-head-text">Data</th>
+        <th className="table-head-text">Durata</th>
+        <th className="table-head-text">Proiect</th>
+        <th className="table-head-text">Descriere</th>
+        <th className="table-head-text text-center">Actiuni</th>
       </tr>
     </thead>
   );

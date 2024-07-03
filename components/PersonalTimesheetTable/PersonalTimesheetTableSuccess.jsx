@@ -59,23 +59,23 @@ const PersonalTimesheetTableSuccess = ({ data, refetch, selectedRows, setSelecte
           <Checkbox
             onChange={() => toggleRow(activity._id)}
             checked={isSelected}
-            className={'form-checkbox p-2 cursor-pointer checked:bg-primary ring-primary'}
+            className={'form-checkbox sm:p-2 cursor-pointer checked:bg-primary ring-primary'}
           />
         </td>
-        <td className="p-3 w-40">
+        <td className="p-3 w-40 tablet:text-xs">
           <ActivityDate date={activity.date} />
         </td>
-        <td className="px-3 py-2 w-28">
+        <td className="px-3 py-2 w-28 tablet:text-xs">
           <FormatDuration duration={activity.duration} />
         </td>
-        <td className="p-3 w-64">
+        <td className="p-3 w-64 tablet:text-xs">
           <ProjectLink {...activity.project} />
         </td>
-        <td className="p-3">
+        <td className="p-3 tablet:text-xs">
           <Description description={activity.description} limit={95} />
         </td>
 
-        <td className="p-3 w-20">
+        <td className="p-3 w-20 tablet:text-xs">
           <PersonalTimesheetRowActions activity={activity} refetch={refetch} />
         </td>
       </tr>
@@ -93,7 +93,7 @@ const PersonalTimesheetTableSuccess = ({ data, refetch, selectedRows, setSelecte
             </td>
             <td className="px-3 py-2 w-28">
               <span className="font-bold text-white">
-                <FormatDuration duration={getTotalTimeWorked(data, selectedRows)} />
+                <FormatDuration duration={getTotalTimeWorked(data, selectedRows)}/>
               </span>
             </td>
             <td></td>

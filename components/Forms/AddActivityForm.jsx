@@ -9,12 +9,11 @@ import { createActivity } from '../../api/activities';
 import { toaster } from '../../lib';
 import { useState } from 'react';
 import InvisibleProjectID from "../Activities/InvisibleProjectID";
+import {useProfile} from "../../hooks";
 
 const AddActivityForm = ({ hideModal, projectId, userId }) => {
-  console.log("heei")
+
   const handleSubmit = async (values, resetForm, setFieldValue) => {
-    console.log("hei2")
-    console.log(values)
     try {
       await createActivity(values);
       toaster.success('Activitatea a fost adaugata');
