@@ -40,11 +40,11 @@ const EditActivityForm = ({ hideModal, id }) => {
             onSubmit={handleSubmit}
           >
             <Form className="flex flex-col space-y-4">
-              <div className="flex">
-                <div className="w-1/2 mr-6">
+              <div className="flex mobile:flex-col">
+                <div className="w-1/2 mobile:w-full mr-6">
                   <ActivityDate />
                 </div>
-                <div className="w-1/2">
+                <div className="w-1/2 mobile:w-full mobile:mt-4">
                   <ActivityDuration />
                 </div>
               </div>
@@ -62,13 +62,13 @@ const EditActivityForm = ({ hideModal, id }) => {
               <div className="buttons-container">
                 <button
                   type="button"
-                  className="px-5 py-2 bg-accent text-white rounded-md mt-4"
+                  className="px-5 py-2 bg-accent text-white rounded-md"
                   onClick={hideModal}
                 >
                   <i className="fa-solid fa-arrow-left" />
                   <span className="ml-2">Anulează</span>
                 </button>
-                <Submit className="button grow full primary mt-4 px-5 py-2 bg-primary text-white rounded-md">
+                <Submit className="button grow full primary px-5 py-2 bg-primary text-white rounded-md">
                   <i className="fa-solid fa-check" />
                   <span className="ml-2">Confirmă</span>
                 </Submit>

@@ -13,7 +13,7 @@ const NonStandardDaysTables = ({ nonStandardDays, DATES_TYPES }) => {
   const overTimeDaysArray = nonStandardDaysArray.filter((day) => day.type === 'extraTimeDays');
   const incompleteDaysArray = nonStandardDaysArray.filter((day) => day.type === 'incompleteDays');
   return (
-    <div className="flex gap-2 items-start w-full">
+    <div className="flex gap-2 laptop:grid items-start w-full">
       {overTimeDaysArray.length > 0 && (
         <NonStandardDaysTable
           tableType="extra-time"

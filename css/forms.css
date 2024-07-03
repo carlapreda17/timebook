@@ -131,5 +131,5 @@ input:-webkit-autofill:active > .dark {
 }
 
 .buttons-container{
-  @apply flex flex-col justify-between pt-8 sm:flex-row gap-4 sm:justify-between mt-6 !important;
+  @apply flex flex-row pt-8 mobile:flex-col gap-4 mt-6 !important;
 }
