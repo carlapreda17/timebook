@@ -103,7 +103,7 @@ const LogbookTableSuccess = ({ data, refetch, selectedRows, setSelectedRows, tim
             <td className="px-3 py-2 w-28">
 
               <span className="font-bold text-white">
-                <FormatDuration  duration={selectedRows.length > 0 ? getTotalTimeWorked(data, selectedRows): timeData} smallText={true} />
+                <FormatDuration  duration={selectedRows.length > 0 ? getTotalTimeWorked(data, selectedRows): timeData}/>
               </span>
             </td>
             <td></td>

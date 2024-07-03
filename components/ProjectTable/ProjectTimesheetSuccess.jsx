@@ -93,7 +93,7 @@ const ProjectTimesheetSuccess = ({ data, refetch, selectedRows, setSelectedRows 
             </td>
             <td className="px-3 py-2 w-28 tablet:text-xs">
               <span className="font-bold text-white">
-                <FormatDuration duration={getTotalTimeWorked(data, selectedRows)} smallText={true} />
+                <FormatDuration duration={getTotalTimeWorked(data, selectedRows)}/>
               </span>
             </td>
             <td></td>
