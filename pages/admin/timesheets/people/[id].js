@@ -39,7 +39,7 @@ const Page = ({ id }) => {
               <SeePersonStatsButton id={id} />
             </div>
           )}
-          <AddActivityButton userId={id}  onHideModal={refetch} />
+          <AddActivityButton userId={id} onHideModal={refetch} />
         </div>
         <div className="p-4">
           {selectedRows.length === 0 && (

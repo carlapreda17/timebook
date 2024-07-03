@@ -37,7 +37,7 @@ const Page = ({ id }) => {
                 </Link>
               </div>
             </div>
-            <AddActivityButton onHideModal={refetch} projectId={id} />
+            <AddActivityButton onHideModal={refetch} projectId={id}/>
           </div>
           <div className="p-4">
             {selectedRows.length === 0 && (

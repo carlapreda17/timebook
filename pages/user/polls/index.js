@@ -35,7 +35,7 @@ const Page = () => {
               <h1 className="header-title">Sondaje</h1>
               <ProposePollButton />
             </div>
-            <div className="p-4 flex gap-6 flex-col sm:flex-row">
+            <div className="p-4 flex gap-6 flex-row laptop:grid">
               <PollsDateFilter setOptions={setOptions} />
               <PollsPriorityFilter setOptions={setOptions} />
               <PollsCompletedFilter setOptions={setOptions} />

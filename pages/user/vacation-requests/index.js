@@ -15,7 +15,7 @@ const Page = () => {
   return (
     <Layout title="Concedii" role="user">
       <div className="bg-primary text-white rounded-t-xl w-full">
-        <div className="flex flex-row items-center justify-between p-4">
+        <div className="flex flex-row items-start justify-between p-4">
           <div>
             <h1 className="header-title">Concedii</h1>
             <UserVacationTotals data={data} />

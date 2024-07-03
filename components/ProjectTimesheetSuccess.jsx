@@ -56,7 +56,7 @@ const ProjectTimesheetSuccess = ({ data, project, refetch }) => {
             <h2 className=" text-2xl font-semibold">{project.name}</h2>
           </div>
           <button className="py-2.5 px-5 text-white h-min bg-primary rounded" onClick={showModal}>
-            Adauga activitate
+            Adaugă activitate
           </button>
         </div>
 

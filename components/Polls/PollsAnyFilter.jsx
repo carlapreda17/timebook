@@ -1,6 +1,6 @@
 const PollsAnyFilter = ({ label, options, onChange }) => {
   return (
-    <div>
+    <div className="laptop:w-80 tablet:w-56">
       <label className="font-semibold mb-1">{label}</label>
       <select className="select" onChange={(e) => onChange(e.target.value)} defaultValue={''}>
         {options.map((option, index) => (
