@@ -9,6 +9,7 @@ import SelectProject from '../Fields/SelectProject';
 import { Fieldset, Submit } from '../Formik';
 import UserActivityEditFormError from '../ProjectTable/UserActivityEditFormError';
 import UserActivityEditFormLoading from '../ProjectTable/UserActivityEditFormLoading';
+import React from "react";
 
 const EditDayActivityFormUser = ({ hideModal, id, refetch, setShowMenu }) => {
   const { data, status } = useQuery(`/activities/${id}`);
@@ -43,13 +44,13 @@ const EditDayActivityFormUser = ({ hideModal, id, refetch, setShowMenu }) => {
             <Form className="flex flex-col space-y-4">
               <div className="flex flex-col md:flex-row">
                 <div className="w-full md:w-1/2 mr-6">
-                  <ActivityDate />
+                  <ActivityDate/>
                 </div>
                 <div className="w-full md:w-1/2">
-                  <ActivityDuration />
+                  <ActivityDuration/>
                 </div>
               </div>
-              <SelectProject />
+              <SelectProject/>
               <Fieldset name="description" label="Descrierea activității">
                 <Field
                   id="description"
@@ -59,11 +60,14 @@ const EditDayActivityFormUser = ({ hideModal, id, refetch, setShowMenu }) => {
                   autoComplete="off"
                 />
               </Fieldset>
-              <div className="sm:flex grid grid-cols-2 sm:justify-end items-end gap-3 font-medium">
-                <button type="button" className="cancel" onClick={hideModal}>
+              <div className="buttons-container">
+                <button
+                  className="px-5 py-2 font-medium bg-accent text-white rounded-md mobile:w-full"
+                  onClick={hideModal}>
                   Anulează
                 </button>
-                <Submit className="confirm w-full">Confirmă</Submit>
+                <Submit
+                  className="px-5 py-2 bg-primary text-white rounded-md mobile:w-full">Confirmă</Submit>
               </div>
             </Form>
           </Formik>

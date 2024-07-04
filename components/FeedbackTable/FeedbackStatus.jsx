@@ -30,7 +30,7 @@ const FeedbackStatus = ({ status, id, refetch }) => {
         </Tooltip>
       ) : (
         <div className="cursor-pointer" onClick={() => setModal('solve')}>
-          <Tooltip icon="fa-solid fa-thumbs-up text-2xl w-full text-center text-primary">
+          <Tooltip icon="fa-solid fa-thumbs-up text-2xl tablet:text-base w-full text-center text-primary">
             Marcheaza ca rezolvat
           </Tooltip>
         </div>

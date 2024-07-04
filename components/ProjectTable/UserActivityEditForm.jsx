@@ -31,8 +31,8 @@ const UserActivityEditForm = ({ hideModal, id }) => {
       {status === 'loading' && <UserActivityEditFormLoading />}
       {status === 'error' && <UserActivityEditFormError />}
       {status === 'success' && (
-        <div className="w-full p-4 bg-white rounded-lg max-w-xl px-6">
-          <h1 className="font-bold text-2xl mb-10">Editează o activitate</h1>
+        <div className="w-full p-4 bg-white rounded-lg max-w-xl px-6 dark:bg-slate-900">
+          <h1 className="font-bold text-2xl pb4 mb-4 border-b dark:text-white dark:border-b-slate-800">Editează o activitate</h1>
           <Formik
             initialValues={{ ...data, project: data.project._id, user: data.user._id }}
             validationSchema={validationSchema}
@@ -41,13 +41,13 @@ const UserActivityEditForm = ({ hideModal, id }) => {
             <Form className="flex flex-col space-y-4">
               <div className="flex flex-col md:flex-row">
                 <div className="w-full md:w-1/2 mr-6">
-                  <ActivityDate />
+                  <ActivityDate/>
                 </div>
                 <div className="w-full md:w-1/2">
-                  <ActivityDuration />
+                  <ActivityDuration/>
                 </div>
               </div>
-              <SelectProject />
+              <SelectProject/>
               <Fieldset name="description" label="Descrierea activității">
                 <Field
                   id="description"
@@ -57,13 +57,14 @@ const UserActivityEditForm = ({ hideModal, id }) => {
                   autoComplete="off"
                 />
               </Fieldset>
-              <div className="flex items-end flex-col md:flex-row gap-4 md:ml-auto md:mx-0">
-                <button type="button" className="cancel" onClick={hideModal}>
-                  <span className="ml-2">Anulează</span>
+              <div className="buttons-container">
+                <button
+                  className="px-5 py-2 font-medium bg-accent text-white rounded-md mobile:w-full"
+                  onClick={hideModal}>
+                  Anulează
                 </button>
-                <Submit className="confirm">
-                  <span className="ml-2">Confirma</span>
-                </Submit>
+                <Submit
+                  className="px-5 py-2 bg-primary text-white rounded-md mobile:w-full">Confirmă</Submit>
               </div>
             </Form>
           </Formik>
