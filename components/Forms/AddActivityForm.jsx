@@ -10,6 +10,7 @@ import { toaster } from '../../lib';
 import { useState } from 'react';
 import InvisibleProjectID from "../Activities/InvisibleProjectID";
 import {useProfile} from "../../hooks";
+import InvisibleUserID from "../Activities/InvisibleUserID";
 
 const AddActivityForm = ({ hideModal, projectId, userId }) => {
 
@@ -44,9 +45,10 @@ const AddActivityForm = ({ hideModal, projectId, userId }) => {
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
-        onSubmit={(values, { resetForm, setFieldValue }) =>
-          handleSubmit(values, resetForm, setFieldValue)
-        }
+        onSubmit={(values, actions) => {
+          console.log('Formik onSubmit called'); // Debugging: Ensure this is called
+          handleSubmit(values, actions.resetForm, actions.setFieldValue);
+        }}
       >
         <Form className="flex flex-col space-y-4">
           <div className="flex mobile:flex-col">
@@ -90,7 +92,8 @@ const AddActivityForm = ({ hideModal, projectId, userId }) => {
               <Submit className="px-5 py-2 bg-primary text-white rounded-md mobile:w-full">Confirmă</Submit>
             </div>
           </div>
-          {projectId && <InvisibleProjectID id={projectId} />}
+          {projectId && <InvisibleProjectID id={projectId}/>}
+          {userId && <InvisibleUserID id={userId}/>}
         </Form>
       </Formik>
     </div>
