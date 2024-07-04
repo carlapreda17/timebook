@@ -12,7 +12,7 @@ const Password = (props) => {
       <input type={type} className="input" {...props} />
       <button
         type="button"
-        className="absolute right-0 p-2 outline-none"
+        className="absolute right-0 p-2 outline-none mobile:top-[50%] mobile:-translate-y-1/2"
         onClick={() => toggle(!showPassword)}
         tabIndex="-1"
       >
