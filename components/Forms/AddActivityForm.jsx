@@ -82,7 +82,7 @@ const AddActivityForm = ({ hideModal, projectId, userId }) => {
             </Checkbox>
             <div className="flex gap-4 tablet:mt-2 mobile:flex-col">
               <button
-                className="px-5 py-2 bg-accent text-white rounded-md mobile:w-full"
+                className="px-5 py-2 font-medium bg-accent text-white rounded-md mobile:w-full"
                 onClick={hideModal}
                 type="reset"
               >

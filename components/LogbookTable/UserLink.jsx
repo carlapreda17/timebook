@@ -7,7 +7,7 @@ const UserLink = ({ active, first_name, last_name, _id }) => {
 
   return (
     <Link href={`/admin/timesheets/people/${_id}`}>
-      <a className="w-full font-semibold hover:text-sky-500">
+      <a className="w-full font-semibold hover:text-sky-500 flex items-center">
         <span className={active ? '' : 'opacity-50 hover:opacity-100'}>
           {truncate(fullName, 35)}
         </span>
