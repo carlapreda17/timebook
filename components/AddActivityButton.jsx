@@ -5,13 +5,12 @@ import {useProfile} from "../hooks";
 
 const AddActivityButton = ({ onHideModal, userId, projectId, isOnLogbook=false}) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { me } = useProfile();
 
-  // const { me } = useProfile();
-  // console.log(me);
-  // if(me!==null && userId===null){
-  //   userId = me.me;
-  // }
 
+  if (me && me.role === 'user' && !userId) {
+    userId = me.me;
+  }
   const showModal = () => setIsOpen(true);
   const hideModal = () => {
     setIsOpen(false);

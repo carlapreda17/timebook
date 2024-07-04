@@ -46,7 +46,6 @@ const AddActivityForm = ({ hideModal, projectId, userId }) => {
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={(values, actions) => {
-          console.log('Formik onSubmit called'); // Debugging: Ensure this is called
           handleSubmit(values, actions.resetForm, actions.setFieldValue);
         }}
       >
