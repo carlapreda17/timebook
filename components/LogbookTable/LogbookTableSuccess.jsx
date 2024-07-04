@@ -72,7 +72,7 @@ const LogbookTableSuccess = ({ data, refetch, selectedRows, setSelectedRows, tim
           <ActivityDate date={activity.date} />
         </td>
         <td className="px-3 py-2 w-28 tablet:text-xs">
-          <FormatDuration duration={activity.duration} smallText={true}/>
+          <FormatDuration duration={activity.duration}/>
         </td>
         <td className="p-3 w-64 tablet:text-xs">
           <ProjectLink {...activity.project} />
