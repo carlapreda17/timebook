@@ -191,7 +191,7 @@ const DateRange = ({ onChange,isOnLogbook=false ,isProjectPage=false,isPersonalT
           className="pl-4 pr-6 h-full tablet:hidden flex"
         />
         <div
-          className="flex mx-6 my-6 gap-4 justify-between tablet:bg-slate-900 tablet:w-1/2 flex-col lg:flex-row ">
+          className="flex mx-6 my-6 gap-4 justify-between dark:tablet:bg-slate-900 tablet:w-1/2 flex-col lg:flex-row ">
           <div className="flex gap-4 flex-col lg:flex-row">
             <button className="cancel" onClick={hideDateRange}>
               Anulează
