@@ -11,7 +11,7 @@ const AreYouSureRomanian = ({ isOpen, hide, iAmSure, children }) => {
       <Modal.Footer>
         <div className="w-full flex justify-between">
           <Button className="cancel" onClick={hide}>
-            <span className="ml-2">Anulează</span>
+            <span>Anulează</span>
           </Button>
           <Button className="delete" onClick={iAmSure}>
             <i className="fa-solid fa-trash" />

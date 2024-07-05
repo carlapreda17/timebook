@@ -38,17 +38,20 @@ const VacationsTableUserSuccess = ({ data, refetch }) => {
     const { amount, description, year } = data;
     return (
       <tr key={data._id} className="table-row">
-        <td className="p-3 w-40">
-          <VacationType type={type} />
+        <td className="p-3 w-40 tablet:text-xs">
+          <VacationType type={type}/>
         </td>
-        <td className="p-3 w-40">{year}</td>
-        <td className="p-3 w-40">{year}</td>
-        <td className="p-3 w-20">{amount && <Plural one="zi" many="zile" count={amount} />}</td>
-        <td className="p-3">
-          {description !== undefined && <Description description={description} limit={85} />}
+        <td className="p-3 w-40 tablet:text-xs">{year}</td>
+        <td className="p-3 w-40 tablet:text-xs">{year}</td>
+        <td className="p-3 w-20">{amount && <Plural one="zi" many="zile" count={amount}/>}</td>
+        <td className="p-3 tablet:text-xs">
+          {description !== undefined && <Description description={description} limit={85}/>}
         </td>
         <td className="p-3 w-20">
-          <VacationStatus status={'approved'} />
+          <VacationStatus status={'approved'}/>
+        </td>
+        <td className="p-3 w-20 tablet:text-xs">
+          {data.status === 'pending' && <DeleteRequestButton id={data._id} refetch={refetch}/>}
         </td>
       </tr>
     );
@@ -57,7 +60,7 @@ const VacationsTableUserSuccess = ({ data, refetch }) => {
   return (
     <div className="table-wrapper">
       <table className="table-container">
-        <VacationsTableUserHead />
+        <VacationsTableUserHead/>
         <tbody>{data.map(showVacations)}
         {!data?.length && (
           <tr>

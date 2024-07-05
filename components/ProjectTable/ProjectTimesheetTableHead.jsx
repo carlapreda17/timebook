@@ -11,10 +11,10 @@ const ProjectTimesheetTableHead = ({ checked, toggleAll }) => (
         />
       </th>
 
-      <th className="p-3 text-gray-200 tablet:text-xs">Data</th>
-      <th className="p-3 text-gray-200 tablet:text-xs">Durata</th>
-      <th className="p-3 text-gray-200 tablet:text-xs">Persoana</th>
-      <th className="p-3 text-gray-200 tablet:text-xs">Descriere</th>
+      <th className="table-head-text">Data</th>
+      <th className="table-head-text">Durata</th>
+      <th className="table-head-text">Persoana</th>
+      <th className="table-head-text">Descriere</th>
     </tr>
   </thead>
 );

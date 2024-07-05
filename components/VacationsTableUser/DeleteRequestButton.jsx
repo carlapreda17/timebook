@@ -9,7 +9,7 @@ const DeleteRequestButton = ({ id, refetch }) => {
   return (
     <>
       <i
-        className="fa-solid fa-trash text-2xl text-accent cursor-pointer"
+        className="fa-solid fa-trash text-2xl tablet:text-base text-accent cursor-pointer"
         onClick={() => setModal('delete')}
       />
       <VacationsTableUserModals modal={modal} hide={hide} id={id} refetch={refetch} />
